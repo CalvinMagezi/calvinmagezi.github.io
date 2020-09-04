@@ -493,6 +493,11 @@ section {
   margin-bottom: 30px;
 }
 
+.portfolio img{
+  height:280px;
+  width: 280px;
+}
+
 .portfolio #portfolio-flters {
   padding: 0;
   margin: 0 auto 35px auto;
