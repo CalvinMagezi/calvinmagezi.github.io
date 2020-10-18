@@ -45,19 +45,86 @@ h6 {
   background: #fff;
 }
 
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #dbd800;
-  border-top-color: rgb(0, 0, 0);
-  border-bottom-color: rgb(214, 0, 0);
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  -webkit-animation: animate-preloader 1s linear infinite;
-  animation: animate-preloader 1s linear infinite;
+.loader {
+  width: 150px;
+    height: 150px;
+    display: inline-block;
+    padding: 0px;
+    border-radius: 100%;
+    position: absolute;
+    margin: 0 auto;
+    top: 30vh;
+    left: 0;
+    right: 50px;
+    border: 5px solid;
+    border-top-color: rgba(215, 3, 3, 0.65);
+    border-bottom-color: rgba(0, 0, 0, 0.65);
+    border-left-color: rgba(240, 255, 0, 0.95);
+    border-right-color: rgba(240, 255, 0, 0.95);
+    -webkit-animation: loader 2s ease-in-out infinite alternate;
+    animation: loader 2s ease-in-out infinite alternate;
+}
+.waivy{
+  position: absolute;
+  margin: 0 auto;
+  top: 60vh;
+  left: 0;
+  transform: translateX(40vw);
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+}
+
+.waivy span {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  color: #000000;
+  text-transform: uppercase;
+  animation: waivy 1s infinite;
+  animation-delay: calc(.1s * var(--i))
+}
+
+#preloader img{
+  width: 100px;
+  height: 90px;
+  top: 35vh;
+  left:0;
+  right: 50px;
+  position: absolute;
+  margin: 0 auto;
+}
+
+@keyframes loader {
+  from {transform: rotate(0deg);}
+  to{transform: rotate(720deg);}
+}
+@-webkit-keyframes loader{
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(720deg);}
+}
+
+@keyframes waivy{
+  0%, 40%, 100%{
+      transform: translateY(0)
+  }
+  20% {
+      transform: translateY(-20px)
+  }
+}
+
+@media (max-width: 768px) {
+  .waivy span{
+      font-size: 30px;
+  }
+  .waivy{
+  top: 50vh;
+  transform: translateX(25vw);
+  }
+  .loader{
+      right:0;
+  }
+  img{
+      right:0;
+  }
 }
 
 @-webkit-keyframes animate-preloader {
