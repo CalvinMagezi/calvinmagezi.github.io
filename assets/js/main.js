@@ -11,7 +11,7 @@
   $(window).on("load", function () {
     if ($("#preloader").length) {
       $("#preloader")
-        .delay(200)
+        .delay(400)
         .fadeOut("slow", function () {
           $(this).remove();
         });
@@ -35,7 +35,7 @@
   $(document).on("click", ".nav-menu a, .scrollto", function (e) {
     if (
       location.pathname.replace(/^\//, "") ==
-        this.pathname.replace(/^\//, "") &&
+      this.pathname.replace(/^\//, "") &&
       location.hostname == this.hostname
     ) {
       e.preventDefault();
