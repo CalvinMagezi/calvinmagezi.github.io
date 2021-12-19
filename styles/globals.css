@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .socialIcon {
+    @apply transition-all duration-150 ease-out cursor-pointer h-7 hover:scale-125;
+  }
+  .navbarLink {
+    @apply flex items-center text-white dark:text-indigo-800 space-x-2 cursor-pointer hover:scale-105 hover:border-b-2 border-indigo-800 pb-2 transition-all duration-100;
+  }
+}
