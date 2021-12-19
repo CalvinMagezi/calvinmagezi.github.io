@@ -20,7 +20,8 @@ function Clients() {
         <div className="max-w-lg lg:max-w-none lg:w-7/12 lg:pl-8 xl:w-6/12">
           <div className="grid grid-cols-3  gap-x-12 gap-y-16">
             <a
-              href="#_"
+              href="https://ener-grow.com"
+              target="_blank"
               className="flex items-center justify-center hover:text-gray-600"
             >
               <img
@@ -30,7 +31,8 @@ function Clients() {
               />
             </a>
             <a
-              href="#_"
+              href="https://musanacarts.com"
+              target="_blank"
               className="flex items-center justify-center hover:text-gray-600"
             >
               <img
@@ -40,7 +42,8 @@ function Clients() {
               />
             </a>
             <a
-              href="#_"
+              href="https://ymfltd.com"
+              target="_blank"
               className="flex items-center justify-center hover:text-gray-600"
             >
               <img
@@ -50,7 +53,8 @@ function Clients() {
               />
             </a>
             <a
-              href="#_"
+              href="https://patrickbitature.com"
+              target="_blank"
               className="flex items-center justify-center hover:text-gray-600"
             >
               <img
@@ -60,7 +64,8 @@ function Clients() {
               />
             </a>
             <a
-              href="#_"
+              href="https://tilemarket.co.ug"
+              target="_blank"
               className="flex items-center justify-center hover:text-gray-600"
             >
               <img
@@ -70,7 +75,8 @@ function Clients() {
               />
             </a>
             <a
-              href="#_"
+              href="https://durapro.co.ug"
+              target="_blank"
               className="flex items-center justify-center hover:text-gray-600"
             >
               <img
@@ -80,7 +86,8 @@ function Clients() {
               />
             </a>
             <a
-              href="#_"
+              href="https://msimboit.net"
+              target="_blank"
               className="flex items-center justify-center hover:text-gray-600"
             >
               <img
@@ -90,7 +97,8 @@ function Clients() {
               />
             </a>
             <a
-              href="#_"
+              href="https://epitomeconcierge.com"
+              target="_blank"
               className="flex items-center justify-center hover:text-gray-600"
             >
               <img
@@ -100,7 +108,8 @@ function Clients() {
               />
             </a>
             <a
-              href="#_"
+              href="https://mkozi.xyz"
+              target="_blank"
               className="flex items-center justify-center hover:text-gray-600"
             >
               <img

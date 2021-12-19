@@ -50,16 +50,19 @@ function Navbar() {
       </h1>
       {/* Social Icons */}
       <div className="flex space-x-4 text-lg text-white dark:text-indigo-800">
-        <a href="" target="_blank">
+        <a
+          href="https://www.facebook.com/profile.php?id=100073695104661"
+          target="_blank"
+        >
           <BsFacebook className="socialIcon" />
         </a>
-        <a href="" target="_blank">
+        <a href="https://www.instagram.com/calvinmagezi/" target="_blank">
           <BsInstagram className="socialIcon" />
         </a>
-        <a href="" target="_blank">
+        <a href="https://twitter.com/CalvinMagezi" target="_blank">
           <BsTwitter className="socialIcon" />
         </a>
-        <a href="" target="_blank">
+        <a href="https://github.com/CalvinMagezi" target="_blank">
           <BsGithub className="socialIcon" />
         </a>
       </div>
