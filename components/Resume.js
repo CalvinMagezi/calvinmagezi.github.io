@@ -1,16 +1,16 @@
 function Resume() {
   return (
     <section id="resume">
-      <div className="dark:bg-[whitesmoke] bg-gray-900 text-white dark:text-indigo-800 py-8">
-        <div className="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
-          <div className="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-8">
-            <p className="ml-2 text-indigo-800 uppercase tracking-loose">
+      <div className="dark:bg-[whitesmoke] bg-gray-900 text-white dark:text-[#FFC100] py-8">
+        <div className="container flex flex-col items-start mx-auto my-12 md:flex-row md:my-24">
+          <div className="sticky flex flex-col w-full px-8 mt-2 md:top-36 lg:w-1/3 md:mt-12">
+            <p className="ml-2 text-[#FFC100] uppercase tracking-loose">
               Summary
             </p>
-            <p className="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2">
+            <p className="mb-2 text-3xl leading-normal md:text-4xl md:leading-relaxed">
               Calvin Magezi
             </p>
-            <p className="text-sm md:text-base  mb-4">
+            <p className="mb-4 text-sm md:text-base">
               Innovative and driven Software Developer with 5+ years of
               designing websites and applications. CEO, Founder and Lead
               Developer at Magezi Tech Solutions.
@@ -23,16 +23,16 @@ function Resume() {
             <a
               href="https://magezi-tech.vercel.app"
               target="_blank"
-              className="bg-transparent mr-auto hover:bg-indigo-800 text-indigo-800 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-indigo-800 hover:border-transparent"
+              className="bg-transparent mr-auto hover:bg-[#FFC100] text-[#FFC100] hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-[#FFC100] hover:border-transparent"
             >
               Magezi Tech Solutions
             </a>
           </div>
-          <div className="ml-0 md:ml-12 lg:w-2/3 sticky">
-            <div className="container mx-auto w-full h-full">
-              <div className="relative wrap overflow-hidden p-10 h-full">
+          <div className="sticky ml-0 md:ml-12 lg:w-2/3">
+            <div className="container w-full h-full mx-auto">
+              <div className="relative h-full p-10 overflow-hidden wrap">
                 <div
-                  className="border-2-2 border-yellow-555 absolute h-full border"
+                  className="absolute h-full border border-2-2 border-yellow-555"
                   style={{
                     right: "50%",
                     border: "2px solid #FFC100",
@@ -40,21 +40,21 @@ function Resume() {
                   }}
                 ></div>
                 <div
-                  className="border-2-2 border-yellow-555 absolute h-full border"
+                  className="absolute h-full border border-2-2 border-yellow-555"
                   style={{
                     left: "50%",
                     border: "2px solid #FFC100",
                     borderRadius: "1%",
                   }}
                 ></div>
-                <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                <div className="flex flex-row-reverse items-center justify-between w-full mb-8 left-timeline">
                   <div className="order-1 w-5/12"></div>
                   <div className="order-1 w-5/12 px-1 py-4 text-right">
-                    <p className="mb-3 text-base text-indigo-800">2011-2015</p>
-                    <h4 className="mb-3 font-bold text-lg md:text-2xl">
+                    <p className="mb-3 text-base text-[#FFC100]">2011-2015</p>
+                    <h4 className="mb-3 text-lg font-bold md:text-2xl">
                       Brookhouse International Schools Kenya
                     </h4>
-                    <p className="text-sm md:text-base leading-snug  text-opacity-100">
+                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
                       At Brookhouse I participated in the Round Square
                       International Conference in Jordan, Harvard People to
                       People conference in Boston and captained the Rugby,
@@ -62,32 +62,28 @@ function Resume() {
                     </p>
                   </div>
                 </div>
-                <div className="mb-8 flex justify-between items-center w-full right-timeline">
+                <div className="flex items-center justify-between w-full mb-8 right-timeline">
                   <div className="order-1 w-5/12"></div>
-                  <div className="order-1  w-5/12 px-1 py-4 text-left">
-                    <p className="mb-3 text-base text-indigo-800">
-                      2015 - 2016
-                    </p>
-                    <h4 className="mb-3 font-bold text-lg md:text-2xl">
+                  <div className="order-1 w-5/12 px-1 py-4 text-left">
+                    <p className="mb-3 text-base text-[#FFC100]">2015 - 2016</p>
+                    <h4 className="mb-3 text-lg font-bold md:text-2xl">
                       Segi University, Malaysia
                     </h4>
-                    <p className="text-sm md:text-base leading-snug  text-opacity-100">
+                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
                       I undertook a 9 month Pre-medicine course, but soon found
                       out that medicine was not my calling so I turned towards
                       Software Development
                     </p>
                   </div>
                 </div>
-                <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                <div className="flex flex-row-reverse items-center justify-between w-full mb-8 left-timeline">
                   <div className="order-1 w-5/12"></div>
                   <div className="order-1 w-5/12 px-1 py-4 text-right">
-                    <p className="mb-3 text-base text-indigo-800">
-                      2017 - 2020
-                    </p>
-                    <h4 className="mb-3 font-bold text-lg md:text-2xl">
+                    <p className="mb-3 text-base text-[#FFC100]">2017 - 2020</p>
+                    <h4 className="mb-3 text-lg font-bold md:text-2xl">
                       Nelson Mandela University, Port Elizabeth
                     </h4>
-                    <p className="text-sm md:text-base leading-snug  text-opacity-100">
+                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
                       I completed my first working web application in my first
                       year of university. I studied databases and algorithms,
                       programming in C#. I was mentored by Tolu Kush, a software
@@ -98,17 +94,15 @@ function Resume() {
                   </div>
                 </div>
 
-                <div className="mb-8 flex justify-between items-center w-full right-timeline">
+                <div className="flex items-center justify-between w-full mb-8 right-timeline">
                   <div className="order-1 w-5/12"></div>
 
-                  <div className="order-1  w-5/12 px-1 py-4">
-                    <p className="mb-3 text-base text-indigo-800">
-                      2020 - 2021
-                    </p>
-                    <h4 className="mb-3 font-bold  text-lg md:text-2xl text-left">
+                  <div className="order-1 w-5/12 px-1 py-4">
+                    <p className="mb-3 text-base text-[#FFC100]">2020 - 2021</p>
+                    <h4 className="mb-3 text-lg font-bold text-left md:text-2xl">
                       FREELANCE DEVELOPER
                     </h4>
-                    <p className="text-sm md:text-base leading-snug  text-opacity-100">
+                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
                       I developed and designed the Yesero Mugenyi Foundation
                       Website, managed up to 5 projects and tasks at a given
                       time while under pressure. I was recommended by and
@@ -120,14 +114,14 @@ function Resume() {
                   </div>
                 </div>
 
-                <div className="mb-24 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                <div className="flex flex-row-reverse items-center justify-between w-full mb-24 left-timeline">
                   <div className="order-1 w-5/12"></div>
                   <div className="order-1 w-5/12 px-1 py-4 text-right">
-                    <p className="mb-3 text-base text-indigo-800">2021</p>
-                    <h4 className="mb-3 font-bold text-lg md:text-2xl">
+                    <p className="mb-3 text-base text-[#FFC100]">2021</p>
+                    <h4 className="mb-3 text-lg font-bold md:text-2xl">
                       LEAD DEVELOPER AT MSIMBO IT
                     </h4>
-                    <p className="text-sm md:text-base leading-snug  text-opacity-100">
+                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
                       Assisted in the development of The Big Quiz Show Kenya. A
                       live quiz engine that ran on KTN for 7 weeks. Lead
                       developer in the development of Bidleo and Bidchapchap,

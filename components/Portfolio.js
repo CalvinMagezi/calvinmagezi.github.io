@@ -14,14 +14,14 @@ function Portfolio() {
       />
       <div className="container relative z-10 px-4 mx-auto">
         <div className="w-full mb-8 sm:w-1/2 md:w-3/4 sm:pr-4 md:pr-12 sm:-mb-32 md:-mb-24 lg:-mb-36 xl:-mb-28">
-          <h2 className="tracking-widest  uppercase">Projects</h2>
-          <p className="my-3 text-5xl font-bold tracking-tighter  lg:text-6xl">
+          <h2 className="tracking-widest uppercase">Projects</h2>
+          <p className="my-3 text-5xl font-bold tracking-tighter lg:text-6xl">
             Favorite Works
           </p>
           <p className="max-w-sm text-lg ">
             Check out a few of my favorite projects. A few are clones of famous
-            platforms that were just made for fun. Some like Fomoevents are
-            running right now.
+            platforms that were just made for fun. Some like Fomoevents are are
+            still in development.
           </p>
         </div>
 
@@ -128,7 +128,7 @@ function Portfolio() {
           </div>
           <div className="row-span-2 col-span-full sm:col-span-1 md:col-start-3 xl:col-start-3 sm:row-start-3 md:row-start-1 xl:row-start-3">
             <a
-              href="https://bidchapchap.live"
+              href="https://bidchapchap.com"
               target="_blank"
               className="relative flex flex-col items-start justify-end w-full h-full overflow-hidden bg-black shadow-lg rounded-xl group"
               style={{ aspectRatio: "1/1" }}

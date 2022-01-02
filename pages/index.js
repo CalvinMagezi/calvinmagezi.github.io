@@ -24,7 +24,7 @@ export default function Home() {
     }
   };
   return (
-    <div className="flex flex-col w-full  min-h-screen dark:bg-[whitesmoke] bg-gray-900 text-white dark:text-indigo-800">
+    <div className="flex flex-col w-screen  min-h-screen dark:bg-[whitesmoke] bg-gray-900 text-white dark:text-indigo-800">
       <Head>
         <title>Calvin Magezi</title>
         <link rel="icon" href="/favicon.ico" />

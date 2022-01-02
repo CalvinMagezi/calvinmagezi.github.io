@@ -34,10 +34,10 @@ function Navbar() {
   return (
     <div
       className={`${
-        open ? "" : "hidden"
+        open ? " w-screen" : "hidden"
       } justify-between lg:inline-flex items-center w-96 dark:bg-[whitesmoke] bg-gray-900 h-screen sticky top-0 left-0 flex-col space-y-4 py-5`}
     >
-      <div className="w-28 h-28 relative mx-auto border-8 border-gray-500 border-opacity-60 rounded-full">
+      <div className="relative mx-auto border-8 border-gray-500 rounded-full w-28 h-28 border-opacity-60">
         <Image
           src="/profile1.jpeg"
           layout="fill"
@@ -45,7 +45,7 @@ function Navbar() {
           objectFit="cover"
         />
       </div>
-      <h1 className="text-white dark:text-indigo-800 font-bold text-2xl">
+      <h1 className="text-2xl font-bold text-white dark:text-indigo-800">
         Calvin Magezi
       </h1>
       {/* Social Icons */}
@@ -67,7 +67,7 @@ function Navbar() {
         </a>
       </div>
 
-      <ul className="flex flex-col space-y-6 pt-10 flex-grow">
+      <ul className="flex flex-col flex-grow pt-10 space-y-6">
         <li>
           <Link href="/#landing">
             <div className="navbarLink">
@@ -134,24 +134,24 @@ function Navbar() {
         </li> */}
       </ul>
 
-      {colorTheme === "light" ? (
+      {/* {colorTheme === "light" ? (
         <button
           onClick={() => setTheme("light")}
-          className="btn  text-3xl pb-10"
+          className="pb-10 text-3xl btn"
         >
           <FaRegMoon className="z-50 text-[whitesmoke] relative" />
         </button>
       ) : (
         <button
           onClick={() => setTheme("dark")}
-          className=" btn z-50 text-gray-900 text-3xl pb-10"
+          className="z-50 pb-10 text-3xl text-gray-900 btn"
         >
-          <FaRegSun className="z-50 text-gray-900 relative" />
+          <FaRegSun className="relative z-50 text-gray-900" />
         </button>
-      )}
+      )} */}
 
       <div className="w-full text-center">
-        <h1 className="  text-white dark:text-indigo-800">
+        <h1 className="text-white dark:text-indigo-800">
           &copy; Copyright{" "}
           <strong>
             <span>calvinmagezi.com</span>
