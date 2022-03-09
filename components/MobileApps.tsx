@@ -12,7 +12,7 @@ function MobileApps() {
         </div>
         <div>
           <Image
-            src="/mobile/igclone1.png"
+            src="https://res.cloudinary.com/magezi-tech-solutions/image/upload/v1646826713/personal%20pictures/igclone1_grrwqa.png"
             width="500"
             height="500"
             className="rounded"
@@ -20,7 +20,7 @@ function MobileApps() {
         </div>
         <div>
           <Image
-            src="/mobile/igclone2.png"
+            src="https://res.cloudinary.com/magezi-tech-solutions/image/upload/v1646826713/personal%20pictures/igclone2_nxgtak.png"
             width="500"
             height="500"
             className="rounded"
