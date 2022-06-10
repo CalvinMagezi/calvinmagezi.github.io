@@ -1,3 +1,4 @@
+import MobileMenu from "@/components/MobileMenu";
 import Head from "next/head";
 import { FaBars } from "react-icons/fa";
 import { useRecoilState } from "recoil";
@@ -39,12 +40,7 @@ export default function Home() {
         <link href="/favicon.ico" rel="icon" />
         <link href="/favicon.ico" rel="apple-touch-icon"></link>
       </Head>
-      <button
-        onClick={toggleMenu}
-        className="fixed text-3xl z-50 top-[1rem] right-[1rem] lg:hidden "
-      >
-        <FaBars />
-      </button>
+      <MobileMenu />
 
       <div className="flex">
         {/* Left Column */}

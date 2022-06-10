@@ -1,5 +1,9 @@
 module.exports = {
   images: {
-    domains: ["lh3.googleusercontent.com", "res.cloudinary.com"],
+    domains: [
+      "lh3.googleusercontent.com",
+      "res.cloudinary.com",
+      "cdn.sanity.io",
+    ],
   },
 };

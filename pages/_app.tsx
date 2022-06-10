@@ -5,6 +5,13 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Router from "next/router";
 import { useState } from "react";
 import Loader from "../components/utils/Loader";
+import {
+  useQuery,
+  useMutation,
+  useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from "react-query";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false);
@@ -21,10 +28,14 @@ function MyApp({ Component, pageProps }: AppProps) {
     setLoading(false);
   });
 
+  const queryClient = new QueryClient();
+
   return (
     <RecoilRoot>
       <ChakraProvider>
-        <Component {...pageProps} />
+        <QueryClientProvider client={queryClient}>
+          <Component {...pageProps} />
+        </QueryClientProvider>
       </ChakraProvider>
     </RecoilRoot>
   );

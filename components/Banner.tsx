@@ -1,5 +1,6 @@
 import { useRecoilState } from "recoil";
 import { navbarState } from "../atoms/navbarAtom";
+import Typed from "react-typed";
 
 function Banner() {
   const [open, setOpen] = useRecoilState(navbarState);
@@ -26,6 +27,26 @@ function Banner() {
       <p className="z-10 pt-5 pl-10 text-xl font-bold text-white">
         The Sky Is <strong>Not</strong> The Limit
       </p>
+      <Typed
+        strings={[
+          "Web App Developer...",
+          "Mobile App Developer...",
+          "Graphic Designer...",
+          "Blogger...",
+          "Businessman...",
+          "Book Worm...",
+        ]}
+        typeSpeed={50}
+        backSpeed={50}
+        attr="placeholder"
+        loop
+        className="z-10 pt-5 pl-10 text-xl font-bold "
+      >
+        <input
+          type="text"
+          className="font-bold placeholder-white bg-transparent"
+        />
+      </Typed>
     </section>
   );
 }
