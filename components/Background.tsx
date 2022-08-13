@@ -15,13 +15,11 @@ function Background() {
               <strong>Phone</strong>: +256770773552
             </li>
             <li>
-              <strong>City</strong>: Kampala, Uganda / Nairobi, Kenya
+              <strong>City</strong>: Kampala, Uganda / Nairobi, Kenya / Dubai,
+              UAE
             </li>
             <li>
-              <strong>Age</strong>: 24
-            </li>
-            <li>
-              <strong>Email</strong>: calvinmagezi@ymail.com
+              <strong>Email</strong>: calvin@magezi.tech
             </li>
             <li>
               <strong>Current Title</strong>: CEO and Lead Developer
@@ -34,7 +32,10 @@ function Background() {
             and other technological solutions. I'm the senior software developer
             of the Yesero Mugeyi Foundation, which is working towards building a
             Satellite Town on 2 square miles of land around Kikwite Hill, Hoima
-            Uganda find out more here.
+            Uganda find out more by clicking{" "}
+            <a href="https://ymfltd.com" target="_blank" rel="noreferrer">
+              here.
+            </a>
           </p>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { FaFile, FaLaptop, FaSmile, FaUserPlus } from "react-icons/fa";
 
 function Facts() {
   return (
-    <div className="w-full ">
+    <div className="">
       <h1 className="pb-2 pl-5 text-4xl font-bold underline">Facts</h1>
 
       <div className="grid items-center justify-between grid-cols-1 px-5 py-5 lg:grid-cols-4">

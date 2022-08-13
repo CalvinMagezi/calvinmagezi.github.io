@@ -2,7 +2,7 @@ import ProgressBar from "./utils/ProgressBar";
 
 function Skills() {
   return (
-    <section id="skills" className="w-full px-4 ">
+    <section id="skills" className="px-4 ">
       <h1 className="pb-2 pl-5 text-4xl font-bold underline">Skills</h1>
       <p className="p-3">
         I'm constantly learning new languages and technologies as we transition

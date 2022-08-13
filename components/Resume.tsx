@@ -1,9 +1,11 @@
+import Image from "next/image";
+
 function Resume() {
   return (
     <section id="resume">
       <div className="py-8 ">
-        <div className="container flex flex-col items-start mx-auto my-12 md:flex-row md:my-24">
-          <div className="sticky flex flex-col w-full px-8 mt-2 md:top-36 lg:w-1/3 md:mt-12">
+        <div className="container flex flex-col items-start mx-auto md:flex-row ">
+          <div className="sticky flex flex-col w-full px-8 mt-2 md:top-36 lg:w-1/3 ">
             <p className="ml-2 text-[#FFC100] uppercase tracking-loose">
               Summary
             </p>
@@ -13,9 +15,9 @@ function Resume() {
             <p className="mb-4 text-sm md:text-base">
               Innovative and driven Software Developer with 5+ years of
               designing websites and applications. CEO, Founder and Lead
-              Developer at Magezi Tech Solutions.
+              Developer at MTS.
             </p>
-            <ul>
+            <ul className="flex flex-col space-y-2">
               <li>Plot 83 Princess Bagaya Close,Hoima, Uganda</li>
               <li>+256 770-773-552</li>
               <li>calvin@magezi.tech</li>
@@ -23,9 +25,9 @@ function Resume() {
             <a
               href="https://magezi-tech.vercel.app"
               target="_blank"
-              className="bg-transparent mr-auto hover:bg-[#FFC100] text-[#FFC100] hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-[#FFC100] hover:border-transparent"
+              className="bg-transparent mt-5 mr-auto hover:bg-[#FFC100] text-[#FFC100] hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-[#FFC100] hover:border-transparent"
             >
-              Magezi Tech Solutions
+              <Image src="/logo-18.png" width="150" height="60" />
             </a>
           </div>
           <div className="sticky ml-0 md:ml-12 lg:w-2/3">
@@ -129,6 +131,103 @@ function Resume() {
                       Captains Terrace Point of Sales System. Assisted in the
                       development of Supamall, Escrow and other projects Msimbo
                       IT is developing.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between w-full mb-8 right-timeline">
+                  <div className="order-1 w-5/12"></div>
+
+                  <div className="order-1 w-5/12 px-1 py-4">
+                    <p className="mb-3 text-base text-[#FFC100]">
+                      September 2021
+                    </p>
+                    <h4 className="mb-3 text-lg font-bold text-left md:text-2xl">
+                      FOUNDED MTS
+                    </h4>
+                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
+                      In September of 2021 I decided that I was ready to try
+                      take on the challenge of running my own company. So I
+                      founded MTS and put together a team of like minded
+                      individuals who are looking to create unique solutions and
+                      grow a network large enough to serve as a purpose for the
+                      smart city my family is building.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-row-reverse items-center justify-between w-full mb-24 left-timeline">
+                  <div className="order-1 w-5/12"></div>
+                  <div className="order-1 w-5/12 px-1 py-4 text-right">
+                    <p className="mb-3 text-base text-[#FFC100]">
+                      December 2021
+                    </p>
+                    <h4 className="mb-3 text-lg font-bold md:text-2xl">
+                      MOVED TO DUBAI
+                    </h4>
+                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
+                      In December 2021 I relocated myself from Nairobi to Dubai.
+                      The trip was initially set to find an investor for one of
+                      our products that was coming up, but due to lack of
+                      interest by the investor, I ended up changing plans and
+                      instead remained in Dubai to seek further connections and
+                      start a life with my beautiful girlfriend Mariannah Hiuhu.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between w-full mb-8 right-timeline">
+                  <div className="order-1 w-5/12"></div>
+
+                  <div className="order-1 w-5/12 px-1 py-4">
+                    <p className="mb-3 text-base text-[#FFC100]">
+                      February 2022
+                    </p>
+                    <h4 className="mb-3 text-lg font-bold text-left md:text-2xl">
+                      APPOINTED CTO OF EPITOME CONCIERGE KAMPALA
+                    </h4>
+                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
+                      I had been working with the epitome concierge kampala for
+                      some time, and due to the value I brought to the table I
+                      was offered shares in the company that I enthusiastically
+                      took up along with the title of CTO. The co-founder Joel
+                      Sengendo is a good friend of mine which had me even more
+                      excited to embark on this journey
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-row-reverse items-center justify-between w-full mb-24 left-timeline">
+                  <div className="order-1 w-5/12"></div>
+                  <div className="order-1 w-5/12 px-1 py-4 text-right">
+                    <p className="mb-3 text-base text-[#FFC100]">June 2022</p>
+                    <h4 className="mb-3 text-lg font-bold md:text-2xl">
+                      CO FOUNDED FLYKEY
+                    </h4>
+                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
+                      In June of 2022, me alongside 3 other individuals founded
+                      a drone technology solutions company known as Flykey.
+                      Flykey is focussed mainly on drone solutions within the
+                      agricultural sector, however we do venture into fields
+                      such as security and surveillance.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between w-full mb-8 right-timeline">
+                  <div className="order-1 w-5/12"></div>
+
+                  <div className="order-1 w-5/12 px-1 py-4">
+                    <p className="mb-3 text-base text-[#FFC100]">August 2022</p>
+                    <h4 className="mb-3 text-lg font-bold text-left md:text-2xl">
+                      APPOINTED HEAD OF TECHNOLOGY AT WALL BRICK REAL ESTATE
+                    </h4>
+                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
+                      In August 2022 I was appointed the head of technology and
+                      digital marketing at wall brick real estate, a real estate
+                      company based and operating within Dubai. I was given the
+                      duties of designing and maintaining systems that would aid
+                      the real estate company, including their web application.
                     </p>
                   </div>
                 </div>

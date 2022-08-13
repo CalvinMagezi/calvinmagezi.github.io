@@ -14,6 +14,7 @@ import {
   FaBars,
   FaJediOrder,
   FaLaravel,
+  FaLinkedin,
   FaMediumM,
   FaRebel,
   FaRegMoon,
@@ -33,7 +34,7 @@ function Navbar() {
     <div
       className={`${
         open ? " w-screen" : "hidden"
-      } justify-between lg:inline-flex items-center w-96 h-screen sticky top-0 left-0 flex-col space-y-4 py-5`}
+      } justify-between lg:inline-flex items-center w-64 h-screen sticky top-0 left-0 flex-col space-y-4 py-5`}
     >
       <div className="relative mx-auto border-8 border-gray-500 rounded-full w-28 h-28 border-opacity-60">
         <Image
@@ -61,19 +62,25 @@ function Navbar() {
         <a href="https://github.com/CalvinMagezi" target="_blank">
           <BsGithub className="socialIcon" />
         </a>
+        <a
+          href="https://www.linkedin.com/in/calvin-magezi-639a53228/"
+          target="_blank"
+        >
+          <FaLinkedin className="socialIcon" />
+        </a>
       </div>
 
       <ul className="flex flex-col flex-grow pt-10 space-y-6">
         <li>
-          <Link href="/#landing">
+          <Link href="/" passHref>
             <div className="navbarLink">
               <BsHouse className="text-2xl" />
-              <h1>Landing</h1>
+              <h1>Home</h1>
             </div>
           </Link>
         </li>
         <li>
-          <Link href="/#about">
+          <Link href="/about-me" passHref>
             <div className="navbarLink">
               <FaUserClock className="text-2xl" />
               <h1>About Me</h1>
@@ -81,15 +88,15 @@ function Navbar() {
           </Link>
         </li>
         <li>
-          <Link href="/#resume">
+          <Link href="/biography" passHref>
             <div className="navbarLink">
               <FaMediumM className="text-2xl" />
-              <h1>Resume</h1>
+              <h1>Biography</h1>
             </div>
           </Link>
         </li>
         <li>
-          <Link href="/#skills">
+          <Link href="/skills" passHref>
             <div className="navbarLink">
               <FaJediOrder className="text-2xl" />
               <h1>Skills</h1>
@@ -97,37 +104,29 @@ function Navbar() {
           </Link>
         </li>
         <li>
-          <Link href="/#projects">
+          <Link href="/projects" passHref>
             <div className="navbarLink">
               <FaLaravel className="text-2xl" />
               <h1>Projects</h1>
             </div>
           </Link>
         </li>
-        {/* <li>
-          <Link href="/#services">
+        <li>
+          <Link href="/blog" passHref>
             <div className="navbarLink">
               <FaRebel className="text-2xl" />
-              <h1>Services</h1>
+              <h1>Blog</h1>
             </div>
           </Link>
         </li>
         <li>
-          <Link href="/#faq">
-            <div className="navbarLink">
-              <BsQuestion className="text-2xl" />
-              <h1>FAQ</h1>
-            </div>
-          </Link>
-        </li>
-        <li>
-          <Link href="/#contact">
+          <Link href="/contact" passHref>
             <div className="navbarLink">
               <RiContactsBookUploadFill className="text-2xl" />
               <h1>Contact Me</h1>
             </div>
           </Link>
-        </li> */}
+        </li>
       </ul>
 
       <ColorModeSwitcher />

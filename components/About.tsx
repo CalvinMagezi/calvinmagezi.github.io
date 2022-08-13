@@ -1,3 +1,7 @@
+import { Flex, Text } from "@chakra-ui/react";
+import Image from "next/image";
+import { FaArrowRight } from "react-icons/fa";
+
 function About() {
   return (
     <section id="about" className="relative w-full overflow-hidden ">
@@ -15,15 +19,19 @@ function About() {
           <p className="font-medium ">
             I'm Calvin Magezi, founder and CEO of Magezi Tech Solutions (MTS).
             I'm a fullstack software developer who currently specializes in
-            React and Laravel development. I lead 2 teams of software developers
-            and I'm constantly learning new languages and frameworks.
+            React and Laravel development. I have a passion for coding and
+            learning new technologies.
           </p>
           <a
             href="https://magezi-tech.vercel.app"
             target="_blank"
-            className="inline-block w-full px-5 py-4 font-bold text-center text-white bg-black md:w-auto"
+            className="inline-block w-full px-5 py-4 font-bold text-center md:w-auto"
           >
-            Learn More About MTS
+            <Flex className="flex-col items-center justify-center space-y-2">
+              <Image src="/logo-18.png" width="150" height="60" />
+              <Text>Learn More</Text>
+              <FaArrowRight className="text-2xl" />
+            </Flex>
           </a>
         </div>
       </div>

@@ -10,7 +10,7 @@ import {
   useDisclosure,
   Flex,
 } from "@chakra-ui/react";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaLinkedin, FaRebel } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -24,6 +24,7 @@ import {
 
 import { FaJediOrder, FaLaravel, FaMediumM, FaUserClock } from "react-icons/fa";
 import { ColorModeSwitcher } from "./utils/ColorModeSwitcher";
+import { RiContactsBookUploadFill } from "react-icons/ri";
 
 function MobileMenu() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -52,7 +53,7 @@ function MobileMenu() {
                 objectFit="cover"
               />
             </div>
-            <div className="flex items-center w-full space-x-4 text-lg justify-evenly">
+            <div className="flex items-center w-full my-3 space-x-4 text-lg justify-evenly">
               <a
                 href="https://www.facebook.com/profile.php?id=100073695104661"
                 target="_blank"
@@ -68,21 +69,27 @@ function MobileMenu() {
               <a href="https://github.com/CalvinMagezi" target="_blank">
                 <BsGithub className="socialIcon" />
               </a>
+              <a
+                href="https://www.linkedin.com/in/calvin-magezi-639a53228/"
+                target="_blank"
+              >
+                <FaLinkedin className="socialIcon" />
+              </a>
             </div>
             <Flex className="items-center justify-center w-full mt-2">
               <ColorModeSwitcher />
             </Flex>
             <ul className="flex flex-col flex-grow pt-5 space-y-6">
               <li>
-                <Link href="/#landing">
+                <Link href="/" passHref>
                   <div className="navbarLink">
                     <BsHouse className="text-2xl" />
-                    <h1>Landing</h1>
+                    <h1>Home</h1>
                   </div>
                 </Link>
               </li>
               <li>
-                <Link href="/#about">
+                <Link href="/about-me" passHref>
                   <div className="navbarLink">
                     <FaUserClock className="text-2xl" />
                     <h1>About Me</h1>
@@ -90,15 +97,15 @@ function MobileMenu() {
                 </Link>
               </li>
               <li>
-                <Link href="/#resume">
+                <Link href="/biography" passHref>
                   <div className="navbarLink">
                     <FaMediumM className="text-2xl" />
-                    <h1>Resume</h1>
+                    <h1>Biography</h1>
                   </div>
                 </Link>
               </li>
               <li>
-                <Link href="/#skills">
+                <Link href="/skills" passHref>
                   <div className="navbarLink">
                     <FaJediOrder className="text-2xl" />
                     <h1>Skills</h1>
@@ -106,10 +113,26 @@ function MobileMenu() {
                 </Link>
               </li>
               <li>
-                <Link href="/#projects">
+                <Link href="/projects" passHref>
                   <div className="navbarLink">
                     <FaLaravel className="text-2xl" />
                     <h1>Projects</h1>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" passHref>
+                  <div className="navbarLink">
+                    <FaRebel className="text-2xl" />
+                    <h1>Blog</h1>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" passHref>
+                  <div className="navbarLink">
+                    <RiContactsBookUploadFill className="text-2xl" />
+                    <h1>Contact Me</h1>
                   </div>
                 </Link>
               </li>

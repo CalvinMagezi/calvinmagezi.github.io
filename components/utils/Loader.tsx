@@ -1,8 +1,10 @@
+import { Box } from "@chakra-ui/react";
+
 function Loader() {
   return (
-    <div
-      style={{ zIndex: "6000" }}
-      className="fixed inset-0 flex items-center justify-center w-screen h-screen transition-opacity duration-300 bg-gray-800"
+    <Box
+      style={{ zIndex: "99" }}
+      className="fixed inset-0 flex items-center justify-center w-screen h-screen transition-opacity duration-300 bg-[#231f20] bg-opacity-80"
     >
       <div className="flex-col overflow-hidden">
         <div className="w-32 h-24">
@@ -48,7 +50,7 @@ function Loader() {
           Loading....
         </div>
       </div>
-    </div>
+    </Box>
   );
 }
 
