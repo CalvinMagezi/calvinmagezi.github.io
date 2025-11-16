@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* Configure dark mode for Tailwind v4 */
+@variant dark (&:where(.dark, .dark *));
+
+/* Brand colors */
+:root {
+  --brand-100: #e5332c;
+  --brand-200: #28292b;
+  --brand-300: #e1af38;
+  --brand-400: #231f20;
+  --brand-500: #dfdfdf;
+}
+
+/* Global styles */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Portfolio specific styles */
+.socialIcon {
+  transition: all 0.15s;
+  cursor: pointer;
+  height: 1.75rem;
+}
+
+.socialIcon:hover {
+  transform: scale(1.25);
+}
+
+.navbarLink {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  gap: 0.5rem;
+  transition: all 0.1s;
+  border-color: rgb(55 48 163);
+  cursor: pointer;
+}
+
+.navbarLink:hover {
+  transform: scale(1.05);
+  border-bottom-width: 2px;
+}

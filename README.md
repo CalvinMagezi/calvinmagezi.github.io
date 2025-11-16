@@ -1,27 +1,111 @@
-# Next.js + Tailwind CSS Example
+# Calvin Magezi - Portfolio Website
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+A modern, responsive portfolio website built with Next.js 16, showcasing my work as a Fullstack Developer, Mobile App Developer, and Blockchain Developer.
 
-## Preview
+## 🚀 Features
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+- **Modern Design**: Built with Next.js 16 App Router and Tailwind CSS
+- **Responsive**: Mobile-first design that works on all devices
+- **Interactive UI**: Smooth animations with Framer Motion
+- **Dynamic Content**: Blog posts and projects fetched via GraphQL
+- **Type-safe**: Full TypeScript implementation
+- **Performance**: Optimized with Next.js features and modern web standards
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+## 🛠️ Tech Stack
 
-## Deploy your own
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **Animation**: Framer Motion
+- **Data**: GraphQL with GraphQL Request
+- **Icons**: React Icons
+- **Forms**: React Hook Form
+- **Notifications**: React Hot Toast
+- **Runtime**: Bun
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+## 📱 Pages & Features
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+- **Home**: Landing page with hero section and animated typing effect
+- **About Me**: Detailed biography and background information
+- **Skills**: Technical skills and expertise showcase
+- **Projects**: Portfolio of web and mobile applications
+- **Blog**: Technical blog posts and articles
+- **Contact**: Get in touch form and contact information
 
-## How to use
+## 🏗️ Project Structure
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+```
+app/
+├── components/          # Reusable UI components
+│   ├── layouts/        # Layout components
+│   ├── blog/          # Blog-specific components
+│   ├── projects/      # Project-specific components
+│   └── utils/         # Utility components
+├── contexts/          # React contexts
+├── about-me/         # About page
+├── biography/        # Biography page
+├── blog/            # Blog pages
+├── contact/         # Contact page
+├── projects/        # Projects page
+├── skills/          # Skills page
+└── globals.css      # Global styles
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+lib/
+└── graphql/         # GraphQL queries and client
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## 🚀 Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/calvinmagezi/calvinmagezi.github.io.git
+   cd calvinmagezi.github.io
+   ```
+
+2. **Install dependencies**
+   ```bash
+   bun install
+   ```
+
+3. **Start the development server**
+   ```bash
+   bun dev
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 📝 Available Scripts
+
+- `bun dev` - Start development server
+- `bun build` - Build for production
+- `bun start` - Start production server
+- `bun lint` - Run ESLint
+
+## 🌟 Key Components
+
+- **Banner**: Hero section with animated typing and call-to-action buttons
+- **Navbar**: Responsive navigation with mobile menu
+- **Portfolio**: Showcase of projects with filtering and details
+- **Blog**: Dynamic blog posts with GraphQL integration
+- **Skills**: Interactive skills display
+- **Contact**: Contact form with validation
+
+## 🎨 Styling
+
+This project uses Tailwind CSS 4 with custom configurations:
+- Modern opacity syntax (`bg-black/30` instead of `bg-opacity-30`)
+- Custom color scheme with red accent colors
+- Responsive design patterns
+- Smooth hover transitions and animations
+
+## 📧 Contact
+
+Calvin Magezi - Fullstack Developer based in Dubai
+
+- **Email**: [Contact through website](https://calvinmagezi.github.io/contact)
+- **Portfolio**: [calvinmagezi.github.io](https://calvinmagezi.github.io)
+
+## 📄 License
+
+This project is personal portfolio - All rights reserved.

@@ -1,0 +1,31 @@
+{
+  "name": "Calvin Magezi - Fullstack Developer",
+  "short_name": "Calvin Magezi",
+  "description": "Ugandan software developer based in Dubai. Expert in fullstack web development, mobile app development, and blockchain technology.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1F2937",
+  "theme_color": "#7C3AED",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/icon",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-icon",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "productivity", "utilities"],
+  "lang": "en",
+  "scope": "/",
+  "id": "calvin-magezi-portfolio"
+}
