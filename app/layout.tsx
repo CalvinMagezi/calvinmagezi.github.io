@@ -4,6 +4,7 @@ import "./globals.css";
 import { NavbarProvider } from "./contexts/NavbarContext";
 import MainLayout from "./components/layouts/MainLayout";
 import { Toaster } from "react-hot-toast";
+import { Analytics } from "@vercel/analytics/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -109,6 +110,7 @@ export default function RootLayout({
           </MainLayout>
           <Toaster />
         </NavbarProvider>
+        <Analytics />
       </body>
     </html>
   );
