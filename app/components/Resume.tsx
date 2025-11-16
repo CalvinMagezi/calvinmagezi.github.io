@@ -13,28 +13,43 @@ function Resume() {
               Calvin Magezi
             </p>
             <p className="mb-4 text-sm md:text-base">
-              Innovative and driven Software Developer with 5+ years of
-              designing websites and applications. CEO, Founder and Lead
-              Developer at MTS.
+              Innovative tech leader and software developer with 7+ years experience.
+              Currently CTO at Kolaborate and Co-founder/CTO at SiteSeer, driving
+              innovation in African tech talent platforms and AI-powered construction technology.
             </p>
             <ul className="flex flex-col space-y-2">
-              <li>Plot 83 Princess Bagaya Close,Hoima, Uganda</li>
+              <li>Kampala, Uganda</li>
               <li>+256 770-773-552</li>
-              <li>calvin@magezi.tech</li>
+              <li>hello@calvinmagezi.com</li>
             </ul>
-            <a
-              href="https://magezi-tech.vercel.app"
-              target="_blank"
-              rel="noreferrer"
-              className="bg-transparent mt-5 mr-auto hover:bg-[#FFC100] text-[#FFC100] hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-[#FFC100] hover:border-transparent"
-            >
-              <Image 
-                src="/logo-18.png" 
-                width={150} 
-                height={60}
-                alt="Magezi Tech Solutions Logo"
-              />
-            </a>
+            <div className="flex flex-col space-y-3 mt-5">
+              <a
+                href="https://kolaborate.africa"
+                target="_blank"
+                rel="noreferrer"
+                className="bg-transparent hover:bg-[#FFC100] text-[#FFC100] hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-[#FFC100] hover:border-transparent transition-colors"
+              >
+                <Image 
+                  src="/logos/kolaborate.png" 
+                  width={150} 
+                  height={60}
+                  alt="Kolaborate Logo"
+                />
+              </a>
+              <a
+                href="https://siteseer.tech"
+                target="_blank"
+                rel="noreferrer"
+                className="bg-transparent hover:bg-[#FFC100] text-[#FFC100] hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-[#FFC100] hover:border-transparent transition-colors"
+              >
+                <Image 
+                  src="/logos/ss-blue.png" 
+                  width={150} 
+                  height={60}
+                  alt="SiteSeer Logo"
+                />
+              </a>
+            </div>
           </div>
           <div className="sticky ml-0 md:ml-12 lg:w-2/3">
             <div className="container w-full h-full mx-auto">
@@ -234,6 +249,195 @@ function Resume() {
                       company based and operating within Dubai. I was given the
                       duties of designing and maintaining systems that would aid
                       the real estate company, including their web application.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-row-reverse items-center justify-between w-full mb-8 left-timeline">
+                  <div className="order-1 w-5/12"></div>
+                  <div className="order-1 w-5/12 px-1 py-4 text-right">
+                    <p className="mb-3 text-base text-[#FFC100]">January 2023</p>
+                    <h4 className="mb-3 text-lg font-bold md:text-2xl">
+                      ENGAGEMENT & RETURN TO KENYA
+                    </h4>
+                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
+                      In January 2023 I proposed to my beautiful girlfriend Mariannah 
+                      Hiuhu. We then made the decision to move back to Kenya in February 
+                      to be closer to family and prepare for our growing family.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between w-full mb-8 right-timeline">
+                  <div className="order-1 w-5/12"></div>
+                  <div className="order-1 w-5/12 px-1 py-4">
+                    <p className="mb-3 text-base text-[#FFC100]">April 2023</p>
+                    <h4 className="mb-3 text-lg font-bold text-left md:text-2xl">
+                      BIRTH OF TWINS LUCAH & ZION
+                    </h4>
+                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
+                      On April 30th, 2023, just two days after my birthday, our 
+                      beautiful twin boys were born. Lucah came first, followed by 
+                      Zion just one minute later. This was a life-changing moment 
+                      that brought immense joy and new responsibilities.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-row-reverse items-center justify-between w-full mb-8 left-timeline">
+                  <div className="order-1 w-5/12"></div>
+                  <div className="order-1 w-5/12 px-1 py-4 text-right">
+                    <p className="mb-3 text-base text-[#FFC100]">2023</p>
+                    <h4 className="mb-3 text-lg font-bold md:text-2xl">
+                      CIGONA TECHNOLOGIES & MAJOR PROJECTS
+                    </h4>
+                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
+                      Joined Cigona Technologies as a full stack developer for 8 months, 
+                      working on Propa (real estate management application) and GoSoft 
+                      (smart water meter mobile app). Also closed MTS contract to rebuild 
+                      Grain Industries Limited website and developed Praxis business hub prototype.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between w-full mb-8 right-timeline">
+                  <div className="order-1 w-5/12"></div>
+                  <div className="order-1 w-5/12 px-1 py-4">
+                    <p className="mb-3 text-base text-[#FFC100]">Early 2024</p>
+                    <h4 className="mb-3 text-lg font-bold text-left md:text-2xl">
+                      MULTIPLE CLIENT PROJECTS
+                    </h4>
+                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
+                      Built Tikima events management platform, developed Mariam Ndagira&apos;s 
+                      personal website, and created the Ortus Capital Africa website 
+                      (now Oakstone Capital). Each project showcased different aspects 
+                      of modern web development and client needs.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-row-reverse items-center justify-between w-full mb-8 left-timeline">
+                  <div className="order-1 w-5/12"></div>
+                  <div className="order-1 w-5/12 px-1 py-4 text-right">
+                    <p className="mb-3 text-base text-[#FFC100]">March 2024</p>
+                    <h4 className="mb-3 text-lg font-bold md:text-2xl">
+                      CO-FOUNDED SITESEER
+                    </h4>
+                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
+                      Started working with Shawn Muraya on SiteSeer, an AI-powered 
+                      construction project management platform. By November 2024, 
+                      I became a shareholder and co-founder, helping transform 
+                      Africa&apos;s $71.5B construction market through computer vision and predictive analytics.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between w-full mb-8 right-timeline">
+                  <div className="order-1 w-5/12"></div>
+                  <div className="order-1 w-5/12 px-1 py-4">
+                    <p className="mb-3 text-base text-[#FFC100]">June 2024</p>
+                    <h4 className="mb-3 text-lg font-bold text-left md:text-2xl">
+                      REBUILT KOLABORATE PLATFORM
+                    </h4>
+                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
+                      Single-handedly rebuilt the Kolaborate platform from the ground up, 
+                      working alongside the Kolaborate design team. This project laid 
+                      the foundation for my future role as CTO and demonstrated my 
+                      ability to handle large-scale platform development.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-row-reverse items-center justify-between w-full mb-8 left-timeline">
+                  <div className="order-1 w-5/12"></div>
+                  <div className="order-1 w-5/12 px-1 py-4 text-right">
+                    <p className="mb-3 text-base text-[#FFC100]">August 2024</p>
+                    <h4 className="mb-3 text-lg font-bold md:text-2xl">
+                      FAMILY RELOCATION TO UGANDA
+                    </h4>
+                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
+                      Made the strategic decision to relocate with my family to Uganda, 
+                      positioning ourselves closer to the African tech ecosystem while 
+                      continuing remote work on SiteSeer and maintaining client relationships.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between w-full mb-8 right-timeline">
+                  <div className="order-1 w-5/12"></div>
+                  <div className="order-1 w-5/12 px-1 py-4">
+                    <p className="mb-3 text-base text-[#FFC100]">January 2025</p>
+                    <h4 className="mb-3 text-lg font-bold text-left md:text-2xl">
+                      APPOINTED CTO AT KOLABORATE
+                    </h4>
+                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
+                      Pearl Gakazi, CEO of Kolaborate, invited me to join as CTO during 
+                      a lunch meeting. This role allows me to lead technology strategy 
+                      for a platform connecting African tech professionals with global 
+                      opportunities and supporting refugee employment programs.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-row-reverse items-center justify-between w-full mb-8 left-timeline">
+                  <div className="order-1 w-5/12"></div>
+                  <div className="order-1 w-5/12 px-1 py-4 text-right">
+                    <p className="mb-3 text-base text-[#FFC100]">February 2025</p>
+                    <h4 className="mb-3 text-lg font-bold md:text-2xl">
+                      BIRTH OF DAUGHTER NOVA
+                    </h4>
+                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
+                      Our family grew again with the birth of our beautiful daughter Nova. 
+                      Now a father of three, balancing the joys of parenthood with 
+                      leading innovative tech projects across two dynamic companies.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between w-full mb-8 right-timeline">
+                  <div className="order-1 w-5/12"></div>
+                  <div className="order-1 w-5/12 px-1 py-4">
+                    <p className="mb-3 text-base text-[#FFC100]">March 2025</p>
+                    <h4 className="mb-3 text-lg font-bold text-left md:text-2xl">
+                      ELEVATING WOMEN WITH TECH PROGRAM
+                    </h4>
+                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
+                      Created and launched the &quot;Elevating Women With Tech&quot; program through 
+                      Kolaborate - a Software as CSR initiative developing software for 
+                      5 women at a time at no cost using advanced development tools, 
+                      promoting gender equality in tech.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-row-reverse items-center justify-between w-full mb-8 left-timeline">
+                  <div className="order-1 w-5/12"></div>
+                  <div className="order-1 w-5/12 px-1 py-4 text-right">
+                    <p className="mb-3 text-base text-[#FFC100]">September 2025</p>
+                    <h4 className="mb-3 text-lg font-bold md:text-2xl">
+                      HORNETS NEST SHOW SUCCESS
+                    </h4>
+                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
+                      Out of 6 participants on the Hornets Nest show (Uganda&apos;s version 
+                      of Shark Tank), I was the only individual to walk away with 
+                      offers from two investors, demonstrating the value and potential 
+                      of my tech ventures.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between w-full mb-24 right-timeline">
+                  <div className="order-1 w-5/12"></div>
+                  <div className="order-1 w-5/12 px-1 py-4">
+                    <p className="mb-3 text-base text-[#FFC100]">October 2025</p>
+                    <h4 className="mb-3 text-lg font-bold text-left md:text-2xl">
+                      MAJOR PROJECT LEADERSHIP
+                    </h4>
+                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
+                      Leading two significant projects at Kolaborate: the GROW project 
+                      mobile app development and augmenting Total Energies Uganda&apos;s 
+                      development team to create frameworks for deploying data visualization 
+                      dashboards and RAG chat tools within Azure infrastructure.
                     </p>
                   </div>
                 </div>

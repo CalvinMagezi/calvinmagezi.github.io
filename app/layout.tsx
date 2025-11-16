@@ -18,25 +18,34 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Calvin Magezi - Fullstack Developer",
+    default: "Calvin Magezi - CTO | AI & Construction Tech Leader",
     template: "%s | Calvin Magezi"
   },
-  description: "Ugandan software developer based in Dubai. Expert in fullstack web development, mobile app development, and blockchain technology. Building innovative solutions with modern technologies.",
+  description: "Ugandan tech leader and CTO at Kolaborate & SiteSeer. Specializing in AI-powered construction tech, African tech talent platforms, and innovative software solutions. Based in Uganda, serving global markets.",
   keywords: [
     "Calvin Magezi",
+    "CTO",
+    "Chief Technology Officer",
+    "Kolaborate",
+    "SiteSeer",
+    "Construction Tech",
+    "AI Developer",
+    "Prop Tech",
+    "Computer Vision",
+    "Tech Leadership",
+    "Uganda Tech",
+    "African Tech",
     "Fullstack Developer",
-    "Mobile App Developer", 
-    "Blockchain Developer",
-    "Web Developer",
-    "Software Engineer",
+    "Mobile App Developer",
     "React Developer",
     "Next.js Developer",
     "TypeScript Developer",
-    "Node.js Developer",
-    "Dubai Developer",
-    "Uganda Developer",
-    "Frontend Developer",
-    "Backend Developer"
+    "Software Engineer",
+    "Tech Entrepreneur",
+    "AI & ML",
+    "Data Visualization",
+    "RAG Chat",
+    "Azure Infrastructure"
   ],
   authors: [{ name: "Calvin Magezi" }],
   creator: "Calvin Magezi",
@@ -54,8 +63,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://calvinmagezi.vercel.app',
-    title: 'Calvin Magezi - Fullstack Developer',
-    description: 'Ugandan software developer based in Dubai. Expert in fullstack web development, mobile app development, and blockchain technology.',
+    title: 'Calvin Magezi - CTO | AI & Construction Tech Leader',
+    description: 'Ugandan tech leader and CTO at Kolaborate & SiteSeer. Specializing in AI-powered construction tech and African tech talent platforms.',
     siteName: 'Calvin Magezi Portfolio',
     images: [
       {
@@ -68,8 +77,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Calvin Magezi - Fullstack Developer',
-    description: 'Ugandan software developer based in Dubai. Expert in fullstack web development, mobile app development, and blockchain technology.',
+    title: 'Calvin Magezi - CTO | AI & Construction Tech Leader',
+    description: 'Ugandan tech leader and CTO at Kolaborate & SiteSeer. Specializing in AI-powered construction tech and African tech talent platforms.',
     images: ['/twitter-image'],
   },
   robots: {

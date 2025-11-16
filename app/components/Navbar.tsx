@@ -32,7 +32,7 @@ function Navbar() {
     >
       <div className="relative mx-auto border-8 border-gray-500 rounded-full w-28 h-28 border-opacity-60">
         <Image
-          src="/profile1.jpeg"
+          src="/new/calvin-magezi.png"
           fill
           className="rounded-full object-cover"
           alt="Calvin Magezi"

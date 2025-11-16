@@ -64,7 +64,7 @@ function Portfolio() {
           </div>
           <div className="row-span-2 col-span-full sm:col-span-1 md:col-start-1 xl:col-start-2 sm:row-start-4 md:row-start-5 xl:row-start-2">
             <a
-              href="https://magezi-web.vercel.app/"
+              href="https://siteseer.tech/"
               target="_blank"
               rel="noreferrer"
               className="relative flex flex-col items-start justify-end w-full h-full overflow-hidden bg-black shadow-lg rounded-xl group"

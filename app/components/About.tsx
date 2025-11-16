@@ -16,29 +16,44 @@ function About() {
             Background
           </h1>
           <p className="font-medium">
-            I&apos;m Calvin Magezi, founder and CEO of Magezi Tech Solutions (MTS).
-            I&apos;m a fullstack software developer who currently specializes in
-            React and Laravel development. I have a passion for coding and
-            learning new technologies.
+            I&apos;m Calvin Magezi, CTO at Kolaborate and Co-founder/CTO at SiteSeer.
+            Kolaborate is a digital platform connecting African tech professionals with 
+            global opportunities and supporting refugee employment programs. SiteSeer is 
+            an AI-powered construction project management platform transforming Africa&apos;s 
+            $71.5B construction market through computer vision and predictive analytics.
           </p>
-          <a
-            href="https://magezi-tech.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block w-full px-5 py-4 font-bold text-center md:w-auto"
-          >
-            <div className="flex flex-col items-center justify-center space-y-2">
-              <Image src="/logo-18.png" width={150} height={60} alt="Magezi Tech Solutions" />
-              <span>Learn More</span>
-              <FaArrowRight className="text-2xl" />
-            </div>
-          </a>
+          <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-6">
+            <a
+              href="https://kolaborate.africa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block w-full px-5 py-4 font-bold text-center md:w-auto"
+            >
+              <div className="flex flex-col items-center justify-center space-y-2">
+                <Image src="/logos/kolaborate.png" width={150} height={60} alt="Kolaborate" />
+                <span>Visit Kolaborate</span>
+                <FaArrowRight className="text-2xl" />
+              </div>
+            </a>
+            <a
+              href="https://siteseer.tech"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block w-full px-5 py-4 font-bold text-center md:w-auto"
+            >
+              <div className="flex flex-col items-center justify-center space-y-2">
+                <Image src="/logos/ss-blue.png" width={150} height={60} alt="SiteSeer" />
+                <span>Visit SiteSeer</span>
+                <FaArrowRight className="text-2xl" />
+              </div>
+            </a>
+          </div>
         </div>
       </div>
       <div className="absolute top-0 right-0 hidden w-1/3 h-full md:block">
         <Image 
           className="object-cover w-full h-full" 
-          src="/about.jpg" 
+          src="/about.png" 
           fill
           alt="Calvin Magezi"
         />
