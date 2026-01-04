@@ -3,6 +3,7 @@
 import React from "react";
 import MobileMenu from "../MobileMenu";
 import Navbar from "../Navbar";
+import PraxisChat from "../chat/PraxisChat";
 
 function MainLayout({ children }: React.PropsWithChildren) {
   return (
@@ -14,6 +15,8 @@ function MainLayout({ children }: React.PropsWithChildren) {
         <Navbar />
         <div className="flex-grow">{children}</div>
       </div>
+      
+      <PraxisChat />
     </div>
   );
 }

@@ -9,17 +9,26 @@ export function ColorModeSwitcher() {
 
   // Initialize theme after component mounts
   useEffect(() => {
-    setMounted(true);
+    if (typeof window === 'undefined') return;
+    
     const saved = localStorage.getItem('darkMode');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const shouldBeDark = saved ? JSON.parse(saved) : prefersDark;
     
-    setIsDark(shouldBeDark);
-    if (shouldBeDark) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    // Batch state updates
+    const updateTheme = () => {
+      setIsDark(shouldBeDark);
+      setMounted(true);
+      
+      if (shouldBeDark) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    };
+    
+    // Use requestAnimationFrame to avoid synchronous state update in effect
+    requestAnimationFrame(updateTheme);
   }, []);
 
   const toggleColorMode = () => {

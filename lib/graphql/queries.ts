@@ -2,7 +2,7 @@ import { gql } from "graphql-request";
 
 export const AllProjects = gql`
   {
-    projects {
+    projects(first: 50) {
       id
       isPrivate
       linkToDemo
@@ -22,7 +22,7 @@ export const AllProjects = gql`
 
 export const AllPosts = gql`
   {
-    blogPosts(orderBy: publishedOn_DESC) {
+    blogPosts(first: 50, orderBy: publishedOn_DESC) {
       id
       title
       slug
@@ -57,7 +57,7 @@ export const SinglePost = gql`
 
 export const AllPostSlugs = gql`
   {
-    blogPosts {
+    blogPosts(first: 50) {
       slug
     }
   }
