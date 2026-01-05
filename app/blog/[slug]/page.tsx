@@ -1,13 +1,16 @@
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { client } from "@/lib/graphql/client";
 import { SinglePost, AllPostSlugs } from "@/lib/graphql/queries";
 import { BlogPostType } from "../../../typings";
+import { getCategoryInfo, formatDate } from "@/app/data/blog";
+import { FaArrowLeft } from "react-icons/fa";
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 async function getBlogPost(slug: string): Promise<BlogPostType | null> {
@@ -34,8 +37,9 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: BlogPostPageProps) {
   try {
-    const blogPost = await getBlogPost(params.slug);
-    
+    const { slug } = await params;
+    const blogPost = await getBlogPost(slug);
+
     if (!blogPost) {
       return {
         title: 'Post Not Found',
@@ -61,43 +65,99 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const blogPost = await getBlogPost(params.slug);
+  const { slug } = await params;
+  const blogPost = await getBlogPost(slug);
 
   if (!blogPost) {
     notFound();
   }
 
+  const category = getCategoryInfo(blogPost.category);
+
   return (
-    <div className="p-5 mx-auto max-w-7xl">
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-        <div>
-          <h1 className="text-4xl font-bold text-center mb-4">{blogPost.title}</h1>
-          <hr className="my-3" />
-          <div className="flex items-center justify-center w-full mb-5 space-x-4">
-            <span className="text-center text-red-600 font-medium">
-              {blogPost.category}
-            </span>
-            <span>
-              Posted: {new Date(blogPost.publishedOn).toLocaleDateString()}
-            </span>
+    <div className="nexus-gradient-mesh min-h-screen">
+      {/* Back button */}
+      <div className="relative z-10 pt-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-2 font-jakarta text-sm text-[var(--nexus-cream)]/60 hover:text-[var(--nexus-cyan)] transition-colors"
+          >
+            <FaArrowLeft className="w-3 h-3" />
+            Back to Blog
+          </Link>
+        </div>
+      </div>
+
+      {/* Hero Section */}
+      <header className="relative z-10 pt-8 pb-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Category Badge */}
+          <div
+            className="inline-flex px-4 py-1.5 rounded-full font-jetbrains text-xs font-medium mb-6"
+            style={{
+              backgroundColor: `${category.color}15`,
+              color: category.color,
+              border: `1px solid ${category.color}30`,
+            }}
+          >
+            {category.name}
           </div>
-          <div className="relative w-full rounded-lg h-96 lg:sticky lg:top-10">
+
+          {/* Title */}
+          <h1 className="font-outfit text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--nexus-cream)] mb-6 leading-tight">
+            {blogPost.title}
+          </h1>
+
+          {/* Meta */}
+          <div className="flex items-center justify-center gap-4 font-jakarta text-sm text-[var(--nexus-cream)]/50">
+            <span>{formatDate(blogPost.publishedOn)}</span>
+          </div>
+        </div>
+      </header>
+
+      {/* Banner Image */}
+      <div className="relative z-10 px-4 sm:px-6 lg:px-8 pb-12">
+        <div className="max-w-5xl mx-auto">
+          <div className="relative aspect-[21/9] rounded-2xl overflow-hidden border border-white/10">
             <Image
               src={blogPost.banner.url}
               fill
               style={{ objectFit: 'cover' }}
-              className="rounded-lg"
+              className="transition-transform duration-700"
               alt={blogPost.title}
+              priority
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-[var(--nexus-bg)]/50 to-transparent" />
           </div>
         </div>
-        <div>
+      </div>
+
+      {/* Content */}
+      <article className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20">
+        <div className="max-w-3xl mx-auto">
           <div
-            className="prose prose-lg dark:prose-invert max-w-none"
+            className="blog-content prose prose-lg max-w-none font-jakarta leading-relaxed"
             dangerouslySetInnerHTML={{ __html: blogPost.content?.html || '' }}
           />
+
+          {/* Footer */}
+          <div className="mt-16 pt-8 border-t border-white/10">
+            <div className="flex items-center justify-between">
+              <Link
+                href="/blog"
+                className="inline-flex items-center gap-2 font-jakarta text-sm font-medium text-[var(--nexus-cyan)] hover:text-[var(--nexus-cyan)]/80 transition-colors"
+              >
+                <FaArrowLeft className="w-3 h-3" />
+                Back to all articles
+              </Link>
+              <span className="font-jakarta text-xs text-[var(--nexus-cream)]/40">
+                Published {formatDate(blogPost.publishedOn)}
+              </span>
+            </div>
+          </div>
         </div>
-      </div>
+      </article>
     </div>
   );
 }
