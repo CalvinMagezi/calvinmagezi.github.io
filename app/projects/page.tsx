@@ -8,6 +8,8 @@ export const metadata = {
   description: "A showcase of my recent work and side projects - featuring web applications, AI solutions, and innovative software built with modern technologies.",
 };
 
+export const revalidate = 3600; // revalidate at most every hour
+
 async function getProjects(): Promise<ProjectType[]> {
   try {
     const { projects } = await client.request(AllProjects);

@@ -7,6 +7,8 @@ import { BlogPostType } from "../../../typings";
 import { getCategoryInfo, formatDate } from "@/app/data/blog";
 import { FaArrowLeft } from "react-icons/fa";
 
+export const revalidate = 3600; // revalidate at most every hour
+
 interface BlogPostPageProps {
   params: Promise<{
     slug: string;

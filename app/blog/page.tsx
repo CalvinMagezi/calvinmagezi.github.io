@@ -8,6 +8,8 @@ export const metadata = {
   description: "Thoughts, tutorials, and insights about technology, leadership, and the journey of building digital products.",
 };
 
+export const revalidate = 3600; // revalidate at most every hour
+
 async function getBlogPosts(): Promise<BlogPostType[]> {
   try {
     const { blogPosts } = await client.request(AllPosts);
