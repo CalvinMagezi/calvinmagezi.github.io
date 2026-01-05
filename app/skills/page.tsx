@@ -1,13 +1,10 @@
-import Facts from "../components/Facts";
-import Skills from "../components/Skills";
-import Portfolio from "../components/Portfolio";
+import SkillsClient from "../components/skills/SkillsClient";
+
+export const metadata = {
+  title: "Skills",
+  description: "Technical expertise and skills - 10+ years of experience in web development, mobile apps, and cloud infrastructure.",
+};
 
 export default function SkillsPage() {
-  return (
-    <div className="p-5 mx-auto my-5 max-w-7xl">
-      <Facts />
-      <Skills />
-      <Portfolio />
-    </div>
-  );
+  return <SkillsClient />;
 }
