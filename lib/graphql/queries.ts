@@ -16,6 +16,9 @@ export const AllProjects = gql`
       banner {
         url
       }
+      featured
+      current
+      rank
     }
   }
 `;

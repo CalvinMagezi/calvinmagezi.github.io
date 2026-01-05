@@ -7,23 +7,22 @@ import ProjectCard from "./ProjectCard";
 interface ProjectGridProps {
   projects: ProjectType[];
   activeFilter: string | null;
+  isNested?: boolean;
 }
 
-export default function ProjectGrid({ projects, activeFilter }: ProjectGridProps) {
-  // Reverse projects to show newest first, then filter based on active filter
-  const reversedProjects = [...projects].reverse();
-
+export default function ProjectGrid({ projects, activeFilter, isNested }: ProjectGridProps) {
+  // Use projects as-is (they should be pre-sorted or pre-reversed by the caller)
   const filteredProjects = activeFilter
-    ? reversedProjects.filter((project) =>
-        project.technologies.some(
-          (tech) => tech.toLowerCase() === activeFilter.toLowerCase()
-        )
+    ? projects.filter((project) =>
+      project.technologies.some(
+        (tech) => tech.toLowerCase() === activeFilter.toLowerCase()
       )
-    : reversedProjects;
+    )
+    : projects;
 
   return (
-    <section className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20">
-      <div className="max-w-7xl mx-auto">
+    <section className={`relative z-10 ${isNested ? "pb-20" : "px-4 sm:px-6 lg:px-8 pb-20"}`}>
+      <div className={isNested ? "" : "max-w-7xl mx-auto"}>
         {/* Results count */}
         <motion.div
           key={activeFilter || "all"}

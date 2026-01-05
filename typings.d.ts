@@ -27,4 +27,7 @@ export interface ProjectType {
   banner: {
     url: string;
   };
+  featured: boolean;
+  current: boolean;
+  rank: number;
 }
