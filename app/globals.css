@@ -10,6 +10,110 @@
   --brand-300: #e1af38;
   --brand-400: #231f20;
   --brand-500: #dfdfdf;
+
+  /* NEXUS Projects Page Theme */
+  --nexus-bg: #0a0a0f;
+  --nexus-bg-secondary: #12121a;
+  --nexus-cream: #f5f0e8;
+  --nexus-cyan: #00f0ff;
+  --nexus-cyan-dim: rgba(0, 240, 255, 0.15);
+  --nexus-purple: #7800ff;
+  --nexus-purple-dim: rgba(120, 0, 255, 0.1);
+  --nexus-card-bg: rgba(255, 255, 255, 0.03);
+  --nexus-card-border: rgba(255, 255, 255, 0.08);
+  --nexus-card-glow: rgba(0, 240, 255, 0.1);
+}
+
+/* NEXUS Gradient Mesh Background */
+.nexus-gradient-mesh {
+  position: relative;
+  background-color: var(--nexus-bg);
+}
+
+.nexus-gradient-mesh::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 30%, var(--nexus-cyan-dim) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 80% 70%, var(--nexus-purple-dim) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 50% at 50% 50%, rgba(245, 240, 232, 0.02) 0%, transparent 70%);
+  animation: meshMove 20s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes meshMove {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-2%, 2%) scale(1.02);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(2%, -2%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Glassmorphism Card */
+.nexus-card {
+  background: var(--nexus-card-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--nexus-card-border);
+  border-radius: 24px;
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.nexus-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 60px var(--nexus-card-glow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 240, 255, 0.2);
+}
+
+/* Filter Pills */
+.nexus-pill {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.nexus-pill:hover {
+  background: rgba(0, 240, 255, 0.1);
+  border-color: rgba(0, 240, 255, 0.3);
+}
+
+.nexus-pill-active {
+  background: rgba(0, 240, 255, 0.15);
+  border-color: var(--nexus-cyan);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+}
+
+/* Custom font utilities */
+.font-outfit {
+  font-family: var(--font-outfit), system-ui, sans-serif;
+}
+
+.font-jakarta {
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+}
+
+.font-jetbrains {
+  font-family: var(--font-jetbrains), monospace;
+}
+
+/* Text glow effect */
+.text-glow-cyan {
+  text-shadow: 0 0 20px rgba(0, 240, 255, 0.5), 0 0 40px rgba(0, 240, 255, 0.3);
 }
 
 /* Global styles */

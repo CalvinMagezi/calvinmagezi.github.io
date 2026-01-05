@@ -9,11 +9,12 @@ export function ColorModeSwitcher() {
 
   // Initialize theme after component mounts
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
     const saved = localStorage.getItem('darkMode');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const shouldBeDark = saved ? JSON.parse(saved) : prefersDark;
-    
+
     setIsDark(shouldBeDark);
     if (shouldBeDark) {
       document.documentElement.classList.add('dark');
@@ -26,7 +27,7 @@ export function ColorModeSwitcher() {
     const newMode = !isDark;
     setIsDark(newMode);
     localStorage.setItem('darkMode', JSON.stringify(newMode));
-    
+
     if (newMode) {
       document.documentElement.classList.add('dark');
     } else {
