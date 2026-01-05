@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { client } from "@/lib/graphql/client";
+import { fetchGraphQL } from "@/lib/graphql/client";
 import { SinglePost, AllPostSlugs } from "@/lib/graphql/queries";
 import { BlogPostType } from "../../../typings";
 import { getCategoryInfo, formatDate } from "@/app/data/blog";
 import { FaArrowLeft } from "react-icons/fa";
 
-export const revalidate = 3600; // revalidate at most every hour
+export const revalidate = 300; // revalidate every 5 minutes
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -17,8 +17,11 @@ interface BlogPostPageProps {
 
 async function getBlogPost(slug: string): Promise<BlogPostType | null> {
   try {
-    const { blogPost } = await client.request(SinglePost, { slug });
-    return blogPost;
+    const data = await fetchGraphQL<{ blogPost: BlogPostType | null }>(
+      SinglePost,
+      { slug }
+    );
+    return data.blogPost;
   } catch (error) {
     console.error('Error fetching blog post:', error);
     return null;
@@ -27,8 +30,8 @@ async function getBlogPost(slug: string): Promise<BlogPostType | null> {
 
 export async function generateStaticParams() {
   try {
-    const { blogPosts } = await client.request(AllPostSlugs);
-    return blogPosts.map((post: { slug: string }) => ({
+    const data = await fetchGraphQL<{ blogPosts: { slug: string }[] }>(AllPostSlugs);
+    return data.blogPosts.map((post) => ({
       slug: post.slug,
     }));
   } catch (error) {

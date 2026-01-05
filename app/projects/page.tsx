@@ -1,4 +1,4 @@
-import { client } from "@/lib/graphql/client";
+import { fetchGraphQL } from "@/lib/graphql/client";
 import { AllProjects } from "@/lib/graphql/queries";
 import { ProjectType } from "../../typings";
 import ProjectsClient from "../components/projects/ProjectsClient";
@@ -8,12 +8,12 @@ export const metadata = {
   description: "A showcase of my recent work and side projects - featuring web applications, AI solutions, and innovative software built with modern technologies.",
 };
 
-export const revalidate = 3600; // revalidate at most every hour
+export const revalidate = 300; // revalidate every 5 minutes
 
 async function getProjects(): Promise<ProjectType[]> {
   try {
-    const { projects } = await client.request(AllProjects);
-    return projects;
+    const data = await fetchGraphQL<{ projects: ProjectType[] }>(AllProjects);
+    return data.projects;
   } catch (error) {
     console.error('Error fetching projects:', error);
     return [];

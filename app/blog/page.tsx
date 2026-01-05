@@ -1,4 +1,4 @@
-import { client } from "@/lib/graphql/client";
+import { fetchGraphQL } from "@/lib/graphql/client";
 import { AllPosts } from "@/lib/graphql/queries";
 import { BlogPostType } from "../../typings";
 import BlogClient from "../components/blog/BlogClient";
@@ -8,12 +8,12 @@ export const metadata = {
   description: "Thoughts, tutorials, and insights about technology, leadership, and the journey of building digital products.",
 };
 
-export const revalidate = 3600; // revalidate at most every hour
+export const revalidate = 300; // revalidate every 5 minutes
 
 async function getBlogPosts(): Promise<BlogPostType[]> {
   try {
-    const { blogPosts } = await client.request(AllPosts);
-    return blogPosts;
+    const data = await fetchGraphQL<{ blogPosts: BlogPostType[] }>(AllPosts);
+    return data.blogPosts;
   } catch (error) {
     console.error('Error fetching blog posts:', error);
     return [];
