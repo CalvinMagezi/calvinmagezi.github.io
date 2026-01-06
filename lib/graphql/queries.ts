@@ -65,3 +65,20 @@ export const AllPostSlugs = gql`
     }
   }
 `;
+export const FeaturedProjects = gql`
+  {
+    projects(where: { featured: true }, first: 6, orderBy: rank_ASC) {
+      id
+      title
+      description
+      linkToDemo
+      linkToRepo
+      technologies
+      banner {
+        url
+      }
+      featured
+      rank
+    }
+  }
+`;

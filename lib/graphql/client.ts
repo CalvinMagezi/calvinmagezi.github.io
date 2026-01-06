@@ -14,12 +14,13 @@ export async function fetchGraphQL<T>(
   const res = await fetch(HYGRAPH_ENDPOINT, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ query, variables }),
+    body: JSON.stringify({ query, variables: variables ?? {} }),
     next: { revalidate: options?.revalidate ?? 300 }, // 5 minutes default
   });
 
   if (!res.ok) {
-    throw new Error(`GraphQL request failed: ${res.status}`);
+    const errorBody = await res.text();
+    throw new Error(`GraphQL request failed: ${res.status} - ${errorBody}`);
   }
 
   const json = await res.json();

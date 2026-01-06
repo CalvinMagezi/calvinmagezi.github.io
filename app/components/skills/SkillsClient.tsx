@@ -6,8 +6,13 @@ import SkillsHero from "./SkillsHero";
 import StatsSection from "./StatsSection";
 import SkillsGrid from "./SkillsGrid";
 import Portfolio from "../Portfolio";
+import { ProjectType } from "@/typings";
 
-export default function SkillsClient() {
+interface SkillsClientProps {
+  projects: ProjectType[];
+}
+
+export default function SkillsClient({ projects }: SkillsClientProps) {
   const [activeCategory, setActiveCategory] = useState<SkillCategory | null>(null);
 
   return (
@@ -18,7 +23,7 @@ export default function SkillsClient() {
       />
       <StatsSection />
       <SkillsGrid skills={skills} activeCategory={activeCategory} />
-      <Portfolio />
+      <Portfolio projects={projects} />
     </div>
   );
 }
