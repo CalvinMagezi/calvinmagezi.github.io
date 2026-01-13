@@ -3,16 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  BsFacebook,
   BsGithub,
   BsHouse,
-  BsInstagram,
-  BsTwitter,
 } from "react-icons/bs";
 import {
   FaJediOrder,
   FaLaravel,
-  FaLinkedin,
   FaMediumM,
   FaRebel,
   FaUserClock,
@@ -32,7 +28,7 @@ function Navbar() {
     >
       <div className="relative mx-auto border-8 border-gray-500 rounded-full w-28 h-28 border-opacity-60">
         <Image
-          src="/new/calvin-magezi.png"
+          src="/gallery/me.JPG"
           fill
           className="rounded-full object-cover"
           alt="Calvin Magezi"
@@ -40,42 +36,14 @@ function Navbar() {
       </div>
       <h1 className="text-2xl font-bold">Calvin Magezi</h1>
       
-      {/* Social Icons */}
+      {/* GitHub Link Only */}
       <div className="flex space-x-4 text-lg">
-        <a
-          href="https://www.facebook.com/profile.php?id=100073695104661"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <BsFacebook className="socialIcon" />
-        </a>
-        <a 
-          href="https://www.instagram.com/calvinmagezi/" 
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <BsInstagram className="socialIcon" />
-        </a>
-        <a 
-          href="https://twitter.com/CalvinMagezi" 
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <BsTwitter className="socialIcon" />
-        </a>
         <a 
           href="https://github.com/CalvinMagezi" 
           target="_blank"
           rel="noopener noreferrer"
         >
           <BsGithub className="socialIcon" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/calvin-magezi-639a53228/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaLinkedin className="socialIcon" />
         </a>
       </div>
 

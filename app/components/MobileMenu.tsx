@@ -1,15 +1,12 @@
 'use client';
 
 import React, { useState } from "react";
-import { FaBars, FaLinkedin, FaRebel, FaTimes } from "react-icons/fa";
+import { FaBars, FaRebel, FaTimes } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  BsFacebook,
   BsGithub,
   BsHouse,
-  BsInstagram,
-  BsTwitter,
 } from "react-icons/bs";
 import { FaJediOrder, FaLaravel, FaMediumM, FaUserClock } from "react-icons/fa";
 import { ColorModeSwitcher } from "./utils/ColorModeSwitcher";
@@ -59,49 +56,21 @@ function MobileMenu() {
           {/* Profile Image */}
           <div className="relative mx-auto border-8 border-gray-500 rounded-full w-28 h-28 border-opacity-60 mb-4">
             <Image
-              src="/profile1.jpeg"
+              src="/gallery/me.JPG"
               fill
               className="rounded-full object-cover"
               alt="Calvin Magezi"
             />
           </div>
 
-          {/* Social Icons */}
-          <div className="flex items-center w-full my-3 space-x-4 text-lg justify-evenly">
-            <a
-              href="https://www.facebook.com/profile.php?id=100073695104661"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <BsFacebook className="socialIcon" />
-            </a>
-            <a 
-              href="https://www.instagram.com/calvinmagezi/" 
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <BsInstagram className="socialIcon" />
-            </a>
-            <a 
-              href="https://twitter.com/CalvinMagezi" 
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <BsTwitter className="socialIcon" />
-            </a>
+          {/* GitHub Link Only */}
+          <div className="flex items-center justify-center w-full my-3 text-lg">
             <a 
               href="https://github.com/CalvinMagezi" 
               target="_blank"
               rel="noopener noreferrer"
             >
               <BsGithub className="socialIcon" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/calvin-magezi-639a53228/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin className="socialIcon" />
             </a>
           </div>
 
