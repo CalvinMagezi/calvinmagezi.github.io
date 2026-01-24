@@ -12,9 +12,6 @@ const GALLERY_IMAGES = [
   "/gallery/IMG_0765.JPG",
   "/gallery/c56be7d2-f682-4cc7-827f-88d2a5cc02a1.JPG",
   "/gallery/IMG_0710.JPG",
-  "/gallery/927270ba-be98-46a2-aa3d-b671557ee077.JPG",
-  "/gallery/602b4185-34e9-49e0-8eed-01f57e5f6176.JPG",
-  "/gallery/46fcea39-d62d-4b0c-81af-fde5c250f0ed.JPG",
   "/gallery/cdf8b6a1-274e-4f09-bf07-fb5e8e5555dd.JPG",
 ];
 
@@ -44,11 +41,10 @@ function Banner() {
       {GALLERY_IMAGES.map((image, index) => (
         <div
           key={image}
-          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
-            index === currentImageIndex && !isTransitioning
-              ? "opacity-100"
-              : "opacity-0"
-          }`}
+          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${index === currentImageIndex && !isTransitioning
+            ? "opacity-100"
+            : "opacity-0"
+            }`}
           style={{
             backgroundImage: `url(${image})`,
           }}
@@ -57,9 +53,8 @@ function Banner() {
 
       {/* Overlay */}
       <div
-        className={`absolute h-screen bg-black/40 ${
-          isOpen ? "w-64" : "w-screen"
-        }`}
+        className={`absolute h-screen bg-black/40 ${isOpen ? "w-64" : "w-screen"
+          }`}
       ></div>
 
       <h1 className="z-10 pl-10 text-5xl font-bold text-white">
