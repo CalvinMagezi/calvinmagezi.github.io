@@ -33,6 +33,14 @@ export default function ContactPage() {
         "Successfully submitted form, I will be contacting you soon!",
         { duration: 4000 }
       );
+
+      // WhatsApp prefill logic
+      const phoneNumber = "256770773552";
+      const message = `Hello Calvin, my name is ${data.name}. ${data.message} (Email: ${data.email})`;
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+      window.open(whatsappUrl, "_blank");
+
       setIsSubmitted(true);
       reset();
     } catch (error) {
@@ -66,22 +74,22 @@ export default function ContactPage() {
           >
             <BsFacebook className="socialIcon" />
           </a>
-          <a 
-            href="https://www.instagram.com/calvinmagezi/" 
+          <a
+            href="https://www.instagram.com/calvinmagezi/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <BsInstagram className="socialIcon" />
           </a>
-          <a 
-            href="https://twitter.com/CalvinMagezi" 
+          <a
+            href="https://twitter.com/CalvinMagezi"
             target="_blank"
             rel="noopener noreferrer"
           >
             <BsTwitter className="socialIcon" />
           </a>
-          <a 
-            href="https://github.com/CalvinMagezi" 
+          <a
+            href="https://github.com/CalvinMagezi"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -120,7 +128,7 @@ export default function ContactPage() {
                   </p>
                 )}
               </div>
-              
+
               <div>
                 <label className="block mb-2 font-semibold">Email</label>
                 <input
@@ -137,7 +145,7 @@ export default function ContactPage() {
                   </p>
                 )}
               </div>
-              
+
               <div className="md:col-span-2">
                 <label className="block mb-2 font-semibold">Message</label>
                 <textarea

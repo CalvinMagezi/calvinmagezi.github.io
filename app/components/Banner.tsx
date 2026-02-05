@@ -10,9 +10,6 @@ const GALLERY_IMAGES = [
   "/gallery/ceecdba2-0f44-43dc-86c0-950e54132050.JPG",
   "/gallery/33984e7d-d646-4a21-bf91-a46513dc1098.JPG",
   "/gallery/IMG_0765.JPG",
-  "/gallery/c56be7d2-f682-4cc7-827f-88d2a5cc02a1.JPG",
-  "/gallery/IMG_0710.JPG",
-  "/gallery/cdf8b6a1-274e-4f09-bf07-fb5e8e5555dd.JPG",
 ];
 
 function Banner() {
