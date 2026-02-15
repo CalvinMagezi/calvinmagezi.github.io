@@ -37,12 +37,15 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Calvin Magezi - CTO | AI & Construction Tech Leader",
+    default: "Calvin Magezi - Agent Orchestrator | CTO | AI & Construction Tech Leader",
     template: "%s | Calvin Magezi"
   },
-  description: "Ugandan tech leader and CTO at Kolaborate & SiteSeer. Specializing in AI-powered construction tech, African tech talent platforms, and innovative software solutions. Based in Uganda, serving global markets.",
+  description: "Agent Orchestrator and Ugandan tech leader. CTO at Kolaborate & SiteSeer. Specializing in AI-powered construction tech, agentic systems, African tech talent platforms, and innovative software solutions. Based in Uganda, serving global markets.",
   keywords: [
     "Calvin Magezi",
+    "Agent Orchestrator",
+    "Agentic Systems",
+    "AI Agent Development",
     "CTO",
     "Chief Technology Officer",
     "Kolaborate",
@@ -62,6 +65,8 @@ export const metadata: Metadata = {
     "Software Engineer",
     "Tech Entrepreneur",
     "AI & ML",
+    "Multi-Agent Systems",
+    "AI Orchestration",
     "Data Visualization",
     "RAG Chat",
     "Azure Infrastructure"
@@ -82,8 +87,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://calvinmagezi.vercel.app',
-    title: 'Calvin Magezi - CTO | AI & Construction Tech Leader',
-    description: 'Ugandan tech leader and CTO at Kolaborate & SiteSeer. Specializing in AI-powered construction tech and African tech talent platforms.',
+    title: 'Calvin Magezi - Agent Orchestrator | CTO | AI & Construction Tech Leader',
+    description: 'Agent Orchestrator and Ugandan tech leader. CTO at Kolaborate & SiteSeer. Specializing in agentic systems, AI-powered construction tech and African tech talent platforms.',
     siteName: 'Calvin Magezi Portfolio',
     images: [
       {
@@ -96,8 +101,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Calvin Magezi - CTO | AI & Construction Tech Leader',
-    description: 'Ugandan tech leader and CTO at Kolaborate & SiteSeer. Specializing in AI-powered construction tech and African tech talent platforms.',
+    title: 'Calvin Magezi - Agent Orchestrator | CTO | AI & Construction Tech Leader',
+    description: 'Agent Orchestrator and Ugandan tech leader. CTO at Kolaborate & SiteSeer. Specializing in agentic systems, AI-powered construction tech and African tech talent platforms.',
     images: ['/twitter-image'],
   },
   robots: {

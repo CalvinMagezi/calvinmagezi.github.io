@@ -63,12 +63,13 @@ function Banner() {
       <div className="z-10 pt-5 pl-10 text-xl font-bold text-white">
         <ReactTyped
           strings={[
+            "Agent Orchestrator...",
             "CTO at Kolaborate...",
             "Co-founder at SiteSeer...",
-            "AI & Construction Tech Leader...",
+            "AI & Agentic Systems Leader...",
             "African Tech Ecosystem Builder...",
             "Full Stack Developer...",
-            "Tech Entrepreneur...",
+            "Multi-Agent Systems Architect...",
           ]}
           typeSpeed={50}
           backSpeed={50}

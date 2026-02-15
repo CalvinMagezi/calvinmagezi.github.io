@@ -11,6 +11,7 @@ import {
   FaLaravel,
   FaMediumM,
   FaRebel,
+  FaRobot,
   FaUserClock,
 } from "react-icons/fa";
 import { RiContactsBookUploadFill } from "react-icons/ri";
@@ -93,6 +94,14 @@ function Navbar() {
             <div className="navbarLink">
               <FaRebel className="text-2xl" />
               <h1>Blog</h1>
+            </div>
+          </Link>
+        </li>
+        <li>
+          <Link href="/agent-space">
+            <div className="navbarLink">
+              <FaRobot className="text-2xl" />
+              <h1>Agent Space</h1>
             </div>
           </Link>
         </li>

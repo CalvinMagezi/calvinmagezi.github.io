@@ -8,7 +8,7 @@ import {
   BsGithub,
   BsHouse,
 } from "react-icons/bs";
-import { FaJediOrder, FaLaravel, FaMediumM, FaUserClock } from "react-icons/fa";
+import { FaJediOrder, FaLaravel, FaMediumM, FaRobot, FaUserClock } from "react-icons/fa";
 import { ColorModeSwitcher } from "./utils/ColorModeSwitcher";
 import { RiContactsBookUploadFill } from "react-icons/ri";
 
@@ -126,6 +126,14 @@ function MobileMenu() {
                 <div className="navbarLink">
                   <FaRebel className="text-2xl" />
                   <h1>Blog</h1>
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link href="/agent-space" onClick={closeMenu}>
+                <div className="navbarLink">
+                  <FaRobot className="text-2xl" />
+                  <h1>Agent Space</h1>
                 </div>
               </Link>
             </li>
