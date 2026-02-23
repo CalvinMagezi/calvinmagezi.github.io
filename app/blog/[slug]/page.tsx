@@ -1,86 +1,79 @@
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { fetchGraphQL } from "@/lib/graphql/client";
-import { SinglePost, AllPostSlugs } from "@/lib/graphql/queries";
-import { BlogPostType } from "../../../typings";
+import { Metadata } from "next";
+import { getPostBySlug, getAllSlugs } from "@/lib/blog";
 import { getCategoryInfo, formatDate } from "@/app/data/blog";
 import { FaArrowLeft } from "react-icons/fa";
 
-export const revalidate = 300; // revalidate every 5 minutes
-
 interface BlogPostPageProps {
-  params: Promise<{
-    slug: string;
-  }>;
-}
-
-async function getBlogPost(slug: string): Promise<BlogPostType | null> {
-  try {
-    const data = await fetchGraphQL<{ blogPost: BlogPostType | null }>(
-      SinglePost,
-      { slug }
-    );
-    return data.blogPost;
-  } catch (error) {
-    console.error('Error fetching blog post:', error);
-    return null;
-  }
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
-  try {
-    const data = await fetchGraphQL<{ blogPosts: { slug: string }[] }>(AllPostSlugs);
-    return data.blogPosts.map((post) => ({
-      slug: post.slug,
-    }));
-  } catch (error) {
-    console.error('Error generating static params:', error);
-    return [];
-  }
+  return getAllSlugs().map((slug) => ({ slug }));
 }
 
-export async function generateMetadata({ params }: BlogPostPageProps) {
-  try {
-    const { slug } = await params;
-    const blogPost = await getBlogPost(slug);
+export async function generateMetadata({
+  params,
+}: BlogPostPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
 
-    if (!blogPost) {
-      return {
-        title: 'Post Not Found',
-      };
-    }
+  if (!post) return { title: "Post Not Found" };
 
-    return {
-      title: blogPost.title,
-      description: blogPost.excerpt,
-      openGraph: {
-        title: blogPost.title,
-        description: blogPost.excerpt,
-        images: [blogPost.banner.url],
-      },
-    };
-  } catch (error) {
-    console.error('Error generating metadata:', error);
-    return {
-      title: 'Blog Post',
-      description: 'Read the latest blog post by Calvin Magezi',
-    };
-  }
+  return {
+    title: `${post.title} | Calvin Magezi`,
+    description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: "article",
+      publishedTime: post.date,
+      authors: ["Calvin Magezi"],
+      tags: post.tags,
+      ...(post.coverImage ? { images: [post.coverImage] } : {}),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      ...(post.coverImage ? { images: [post.coverImage] } : {}),
+    },
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
+  };
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
-  const blogPost = await getBlogPost(slug);
+  const post = await getPostBySlug(slug);
 
-  if (!blogPost) {
-    notFound();
-  }
+  if (!post) notFound();
 
-  const category = getCategoryInfo(blogPost.category);
+  const category = getCategoryInfo(post.tags[0] ?? "default");
+
+  // JSON-LD structured data
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    author: {
+      "@type": "Person",
+      name: "Calvin Magezi",
+    },
+    datePublished: post.date,
+    keywords: post.tags.join(", "),
+  };
 
   return (
     <div className="nexus-gradient-mesh min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Back button */}
       <div className="relative z-10 pt-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
@@ -94,56 +87,47 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
       </div>
 
-      {/* Hero Section */}
+      {/* Hero */}
       <header className="relative z-10 pt-8 pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Category Badge */}
-          <div
-            className="inline-flex px-4 py-1.5 rounded-full font-jetbrains text-xs font-medium mb-6"
-            style={{
-              backgroundColor: `${category.color}15`,
-              color: category.color,
-              border: `1px solid ${category.color}30`,
-            }}
-          >
-            {category.name}
+          {/* Tags */}
+          <div className="flex flex-wrap justify-center gap-2 mb-6">
+            {post.tags.map((tag) => {
+              const tagCategory = getCategoryInfo(tag);
+              return (
+                <span
+                  key={tag}
+                  className="inline-flex px-4 py-1.5 rounded-full font-jetbrains text-xs font-medium"
+                  style={{
+                    backgroundColor: `${tagCategory.color}15`,
+                    color: tagCategory.color,
+                    border: `1px solid ${tagCategory.color}30`,
+                  }}
+                >
+                  {tag}
+                </span>
+              );
+            })}
           </div>
 
-          {/* Title */}
           <h1 className="font-outfit text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--nexus-cream)] mb-6 leading-tight">
-            {blogPost.title}
+            {post.title}
           </h1>
 
-          {/* Meta */}
           <div className="flex items-center justify-center gap-4 font-jakarta text-sm text-[var(--nexus-cream)]/50">
-            <span>{formatDate(blogPost.publishedOn)}</span>
+            <span>{formatDate(post.date)}</span>
+            <span className="w-1 h-1 rounded-full bg-[var(--nexus-cream)]/30" />
+            <span>{post.readingTime}</span>
           </div>
         </div>
       </header>
 
-      {/* Banner Image */}
-      <div className="relative z-10 px-4 sm:px-6 lg:px-8 pb-12">
-        <div className="max-w-5xl mx-auto">
-          <div className="relative aspect-[21/9] rounded-2xl overflow-hidden border border-white/10">
-            <Image
-              src={blogPost.banner.url}
-              fill
-              style={{ objectFit: 'cover' }}
-              className="transition-transform duration-700"
-              alt={blogPost.title}
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[var(--nexus-bg)]/50 to-transparent" />
-          </div>
-        </div>
-      </div>
-
-      {/* Content */}
+      {/* Article content */}
       <article className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20">
         <div className="max-w-3xl mx-auto">
           <div
             className="blog-content prose prose-lg max-w-none font-jakarta leading-relaxed"
-            dangerouslySetInnerHTML={{ __html: blogPost.content?.html || '' }}
+            dangerouslySetInnerHTML={{ __html: post.content ?? "" }}
           />
 
           {/* Footer */}
@@ -157,7 +141,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 Back to all articles
               </Link>
               <span className="font-jakarta text-xs text-[var(--nexus-cream)]/40">
-                Published {formatDate(blogPost.publishedOn)}
+                Published {formatDate(post.date)}
               </span>
             </div>
           </div>
