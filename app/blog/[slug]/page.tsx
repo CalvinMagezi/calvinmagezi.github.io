@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { getPostBySlug, getAllSlugs } from "@/lib/blog";
@@ -121,6 +122,25 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         </div>
       </header>
+
+      {/* Banner Image */}
+      {post.coverImage && (
+        <div className="relative z-10 px-4 sm:px-6 lg:px-8 pb-10">
+          <div className="max-w-4xl mx-auto">
+            <div className="relative aspect-[16/7] rounded-2xl overflow-hidden border border-white/10">
+              <Image
+                src={post.coverImage}
+                fill
+                style={{ objectFit: "cover" }}
+                className="transition-transform duration-700"
+                alt={post.title}
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[var(--nexus-bg)]/30 to-transparent" />
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Article content */}
       <article className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20">

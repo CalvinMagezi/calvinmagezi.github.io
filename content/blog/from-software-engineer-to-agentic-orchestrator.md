@@ -3,7 +3,7 @@ title: "From Software Engineer to Agentic Orchestrator"
 date: "2026-02-23"
 excerpt: "The day everything changed — how I left my laptop at home and ran a full software operation from my phone using Agent HQ, and why I believe 2026 is the last year we write code."
 tags: ["technology", "ai", "career", "agent-hq"]
-coverImage: ""
+coverImage: "/images/blog/agent-hq-banner.png"
 published: true
 ---
 
