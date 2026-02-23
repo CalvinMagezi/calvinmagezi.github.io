@@ -15,7 +15,7 @@ Today I successfully managed to leave my laptop at home and completely function 
 
 ## What is Agent HQ?
 
-Agent HQ is a side project I've been working on and recently open-sourced. It takes into consideration implementations such as OpenFloor and DropPicks' paper on writing a C compiler using Claude as an agent team, as well as a few videos and concepts that I've picked up along the way — to produce a method that allows you to create a harness that you can connect to different AI agents, be it Claude Code, Gemini CLI, or OpenCode, for your specific purposes.
+Agent HQ is a side project I've been working on and recently open-sourced. It takes into consideration implementations such as openclaw and Anthropic's paper on writing a C compiler using Claude as an agent team, as well as a few videos and concepts that I've picked up along the way — to produce a method that allows you to create a harness that you can connect to different AI agents, be it Claude Code, Gemini CLI, or OpenCode, for your specific purposes.
 
 You can find it here: [github.com/CalvinMagezi/agent-hq](https://github.com/CalvinMagezi/agent-hq)
 
