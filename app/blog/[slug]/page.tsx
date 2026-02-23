@@ -5,6 +5,7 @@ import { Metadata } from "next";
 import { getPostBySlug, getAllSlugs } from "@/lib/blog";
 import { getCategoryInfo, formatDate } from "@/app/data/blog";
 import { FaArrowLeft } from "react-icons/fa";
+import ShareButton from "@/app/components/blog/ShareButton";
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
@@ -54,18 +55,30 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const category = getCategoryInfo(post.tags[0] ?? "default");
 
+  const postUrl = `https://calvinmagezi.vercel.app/blog/${slug}`;
+
   // JSON-LD structured data
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
+    url: postUrl,
+    mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
     author: {
+      "@type": "Person",
+      name: "Calvin Magezi",
+      url: "https://calvinmagezi.vercel.app",
+    },
+    publisher: {
       "@type": "Person",
       name: "Calvin Magezi",
     },
     datePublished: post.date,
     keywords: post.tags.join(", "),
+    ...(post.coverImage
+      ? { image: `https://calvinmagezi.vercel.app${post.coverImage}` }
+      : {}),
   };
 
   return (
@@ -151,7 +164,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           />
 
           {/* Footer */}
-          <div className="mt-16 pt-8 border-t border-white/10">
+          <div className="mt-16 pt-8 border-t border-white/10 flex flex-col gap-6">
+            <ShareButton title={post.title} excerpt={post.excerpt} slug={slug} />
             <div className="flex items-center justify-between">
               <Link
                 href="/blog"
