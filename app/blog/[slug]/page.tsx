@@ -133,6 +133,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <span className="w-1 h-1 rounded-full bg-[var(--nexus-cream)]/30" />
             <span>{post.readingTime}</span>
           </div>
+
+          {/* Share — top */}
+          <div className="flex justify-center mt-6">
+            <ShareButton title={post.title} excerpt={post.excerpt} slug={slug} />
+          </div>
         </div>
       </header>
 
