@@ -27,7 +27,7 @@ export default function BlogCategoryFilter({
       {categoryList.map((cat, index) => {
         const isAll = cat === "all";
         const isActive = isAll ? activeCategory === null : activeCategory === cat;
-        const info = isAll ? null : blogCategories[cat.toLowerCase()] || blogCategories.default;
+        const info = isAll ? null : blogCategories[cat.toLowerCase()] ?? null;
         const color = info?.color || "var(--nexus-cyan)";
 
         return (
@@ -49,7 +49,7 @@ export default function BlogCategoryFilter({
               boxShadow: isActive ? `0 0 20px ${color}30` : "none",
             }}
           >
-            {isAll ? "All" : info?.name || cat}
+            {isAll ? "All" : info?.name ?? cat.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}
           </motion.button>
         );
       })}
