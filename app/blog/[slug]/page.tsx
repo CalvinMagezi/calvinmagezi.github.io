@@ -53,8 +53,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   if (!post) notFound();
 
-  const category = getCategoryInfo(post.tags[0] ?? "default");
-
   const postUrl = `https://calvinmagezi.github.io/blog/${slug}`;
 
   // JSON-LD structured data

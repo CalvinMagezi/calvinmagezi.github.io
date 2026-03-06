@@ -426,7 +426,7 @@ function Resume() {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between w-full mb-24 right-timeline">
+                <div className="flex items-center justify-between w-full mb-8 right-timeline">
                   <div className="order-1 w-5/12"></div>
                   <div className="order-1 w-5/12 px-1 py-4">
                     <p className="mb-3 text-base text-[#FFC100]">October 2025</p>
@@ -434,10 +434,27 @@ function Resume() {
                       MAJOR PROJECT LEADERSHIP
                     </h4>
                     <p className="text-sm leading-snug text-opacity-100 md:text-base">
-                      Leading two significant projects at Kolaborate: the GROW project 
-                      mobile app development and augmenting Total Energies Uganda&apos;s 
-                      development team to create frameworks for deploying data visualization 
+                      Leading two significant projects at Kolaborate: the GROW project
+                      mobile app development and augmenting Total Energies Uganda&apos;s
+                      development team to create frameworks for deploying data visualization
                       dashboards and RAG chat tools within Azure infrastructure.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-row-reverse items-center justify-between w-full mb-24 left-timeline">
+                  <div className="order-1 w-5/12"></div>
+                  <div className="order-1 w-5/12 px-1 py-4 text-right">
+                    <p className="mb-3 text-base text-[#FFC100]">February 2026</p>
+                    <h4 className="mb-3 text-lg font-bold md:text-2xl">
+                      BUILT AGENT-HQ
+                    </h4>
+                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
+                      Created Agent-HQ, a local-first AI agent orchestration hub where an
+                      Obsidian vault serves as the shared memory and knowledge base for
+                      multiple AI agents. Features a multi-agent architecture with real-time
+                      event-driven workflows, cross-device vault sync, and specialized harnesses
+                      for Claude, Gemini, and OpenCode.
                     </p>
                   </div>
                 </div>

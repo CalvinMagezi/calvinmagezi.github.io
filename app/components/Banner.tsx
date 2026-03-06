@@ -3,7 +3,7 @@
 import { useNavbar } from "../contexts/NavbarContext";
 import { ReactTyped } from "react-typed";
 import Link from "next/link";
-import { FaStar } from "react-icons/fa";
+import { FaStar, FaGithub } from "react-icons/fa";
 import { useState, useEffect } from "react";
 
 const GALLERY_IMAGES = [
@@ -105,6 +105,21 @@ function Banner() {
           </button>
         </div>
       </Link>
+      <a
+        href="https://github.com/CalvinMagezi/agent-hq"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="z-20"
+      >
+        <div className="pt-5 pl-10">
+          <button
+            className="flex items-center space-x-2 px-4 py-2 text-white font-bold rounded transition-all duration-200 hover:scale-105 bg-gray-800 hover:bg-gray-900 border border-white/30"
+          >
+            <FaGithub />
+            <span>Agent-HQ</span>
+          </button>
+        </div>
+      </a>
     </section>
   );
 }

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaGithub } from "react-icons/fa";
 
 function About() {
   return (
@@ -23,6 +23,18 @@ function About() {
             $71.5B construction market through computer vision and predictive analytics.
           </p>
           <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-6">
+            <a
+              href="https://github.com/CalvinMagezi/agent-hq"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block w-full px-5 py-4 font-bold text-center md:w-auto"
+            >
+              <div className="flex flex-col items-center justify-center space-y-2">
+                <FaGithub className="text-4xl" />
+                <span>Agent-HQ</span>
+                <FaArrowRight className="text-2xl" />
+              </div>
+            </a>
             <a
               href="https://kolaborate.africa"
               target="_blank"

@@ -8,14 +8,19 @@ export const metadata = {
   description: "Technical expertise and skills - 10+ years of experience in web development, mobile apps, and cloud infrastructure.",
 };
 
-export default async function SkillsPage() {
+async function loadProjects(): Promise<ProjectType[]> {
   try {
     const { projects } = await fetchGraphQL<{ projects: ProjectType[] }>(
       FeaturedProjects
     );
-    return <SkillsClient projects={projects} />;
+    return projects;
   } catch (error) {
     console.error('Error in SkillsPage:', error);
-    return <SkillsClient projects={[]} />;
+    return [];
   }
+}
+
+export default async function SkillsPage() {
+  const projects = await loadProjects();
+  return <SkillsClient projects={projects} />;
 }
