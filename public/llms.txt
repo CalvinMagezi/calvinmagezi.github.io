@@ -1,0 +1,47 @@
+# Calvin Magezi
+
+> Calvin Magezi is a Ugandan CTO, tech entrepreneur, and AI builder based in Kampala, Uganda.
+
+## Who is Calvin Magezi?
+
+Calvin Magezi is the Chief Technology Officer and co-founder of Kolaborate Platforms Limited and SiteSeer. He builds AI-powered software platforms focused on Africa's digital talent ecosystem and construction technology.
+
+- **Full name**: Calvin Magezi
+- **Role**: Chief Technology Officer (CTO)
+- **Location**: Kampala, Uganda
+- **Companies**: Kolaborate Platforms Limited, SiteSeer
+- **GitHub**: https://github.com/CalvinMagezi
+- **Website**: https://calvinmagezi.github.io
+
+## Projects
+
+### Kolaborate
+Africa's talent marketplace and BPO platform. Mission: "Africa's Engine for Global-Ready Digital Talent." Connects African tech talent with global opportunities through a pod-based team delivery model.
+
+### SiteSeer
+AI-powered construction and real estate technology platform. Includes Pango (Kenya home planning app), a Sales CRM, and the NCA Portal for Uganda's National Construction Authority.
+
+### Chamuka
+AI-powered collaborative diagramming tool. Uses Yjs/CRDT for real-time collaboration.
+
+### Agent-HQ
+Open-source local-first AI agent hub. Vault-centric multi-agent orchestration system built on Obsidian. Available at https://github.com/CalvinMagezi/agent-hq
+
+## Technical Expertise
+
+- TypeScript, Next.js, React, Bun runtime
+- AI agent systems and orchestration
+- Local-first software architecture
+- Convex (real-time database), Vercel, Turborepo
+- Mobile development (Expo/React Native)
+- Construction tech and PropTech
+
+## Blog
+
+Calvin writes about AI, software engineering, and tech entrepreneurship at https://calvinmagezi.github.io/blog
+
+Recent posts:
+- "Your Ability to Dictate Your Thoughts Will Be More Valuable Than Anything"
+- "From Software Engineer to Agentic Orchestrator"
+- "The Architecture Mindset Shift"
+- "Ship Now Before It's Too Late"

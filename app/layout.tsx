@@ -16,7 +16,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// Custom fonts for projects page
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
@@ -35,38 +34,42 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
 });
 
+const BASE_URL = "https://calvinmagezi.github.io";
+
 export const metadata: Metadata = {
   title: {
-    default: "Calvin Magezi - CTO | AI & Construction Tech Leader",
+    default: "Calvin Magezi - CTO & Tech Entrepreneur | Uganda",
     template: "%s | Calvin Magezi"
   },
-  description: "Ugandan tech leader and CTO at Kolaborate & SiteSeer. Specializing in AI-powered construction tech, African tech talent platforms, and innovative software solutions. Based in Uganda, serving global markets.",
+  description: "Calvin Magezi is a Ugandan CTO, tech entrepreneur, and AI builder. Co-founder of Kolaborate (Africa's talent platform) and SiteSeer (AI construction tech). Based in Kampala, Uganda.",
   keywords: [
     "Calvin Magezi",
-    "CTO",
-    "Chief Technology Officer",
+    "Calvin Magezi Uganda",
+    "Calvin Magezi CTO",
+    "Calvin Magezi Kolaborate",
+    "Calvin Magezi SiteSeer",
+    "Calvin Magezi developer",
+    "Calvin Magezi tech entrepreneur",
+    "CTO Uganda",
+    "Chief Technology Officer Uganda",
+    "Ugandan tech entrepreneur",
     "Kolaborate",
     "SiteSeer",
-    "Construction Tech",
-    "AI Developer",
-    "Prop Tech",
-    "Computer Vision",
-    "Tech Leadership",
-    "Uganda Tech",
-    "African Tech",
-    "Fullstack Developer",
-    "Mobile App Developer",
-    "React Developer",
-    "Next.js Developer",
-    "TypeScript Developer",
-    "Software Engineer",
-    "Tech Entrepreneur",
-    "AI & ML",
-    "Data Visualization",
-    "RAG Chat",
-    "Azure Infrastructure"
+    "Chamuka",
+    "African tech leader",
+    "Uganda software engineer",
+    "Kampala developer",
+    "AI builder Africa",
+    "Construction tech Africa",
+    "PropTech Uganda",
+    "TypeScript developer",
+    "Next.js developer",
+    "AI agent systems",
+    "local-first software",
+    "fullstack developer Uganda",
+    "tech entrepreneur East Africa",
   ],
-  authors: [{ name: "Calvin Magezi" }],
+  authors: [{ name: "Calvin Magezi", url: BASE_URL }],
   creator: "Calvin Magezi",
   publisher: "Calvin Magezi",
   formatDetection: {
@@ -74,31 +77,32 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://calvinmagezi.vercel.app'),
+  metadataBase: new URL(BASE_URL),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://calvinmagezi.vercel.app',
-    title: 'Calvin Magezi - CTO | AI & Construction Tech Leader',
-    description: 'Ugandan tech leader and CTO at Kolaborate & SiteSeer. Specializing in AI-powered construction tech and African tech talent platforms.',
-    siteName: 'Calvin Magezi Portfolio',
+    url: BASE_URL,
+    title: 'Calvin Magezi - CTO & Tech Entrepreneur | Uganda',
+    description: 'Calvin Magezi is a Ugandan CTO and tech entrepreneur building AI-powered platforms for Africa. Co-founder of Kolaborate and SiteSeer.',
+    siteName: 'Calvin Magezi',
     images: [
       {
         url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'Calvin Magezi - Fullstack Developer',
+        alt: 'Calvin Magezi - CTO & Tech Entrepreneur',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Calvin Magezi - CTO | AI & Construction Tech Leader',
-    description: 'Ugandan tech leader and CTO at Kolaborate & SiteSeer. Specializing in AI-powered construction tech and African tech talent platforms.',
+    title: 'Calvin Magezi - CTO & Tech Entrepreneur | Uganda',
+    description: 'Calvin Magezi is a Ugandan CTO and tech entrepreneur building AI-powered platforms for Africa.',
     images: ['/twitter-image'],
+    creator: '@calvinmagezi',
   },
   robots: {
     index: true,
@@ -111,10 +115,61 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'your-google-verification-code-here',
-  },
   category: 'technology',
+};
+
+// JSON-LD: Person schema — the most important signal for "Calvin Magezi" searches on Google and AI
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": `${BASE_URL}/#person`,
+  name: "Calvin Magezi",
+  url: BASE_URL,
+  image: `${BASE_URL}/profile1.jpeg`,
+  jobTitle: "Chief Technology Officer",
+  description: "Ugandan CTO and tech entrepreneur building AI-powered platforms for Africa. Co-founder of Kolaborate and SiteSeer, based in Kampala, Uganda.",
+  worksFor: [
+    {
+      "@type": "Organization",
+      name: "Kolaborate Platforms Limited",
+      description: "Africa's Engine for Global-Ready Digital Talent",
+    },
+    {
+      "@type": "Organization",
+      name: "SiteSeer",
+      description: "AI-powered construction technology platform",
+    },
+  ],
+  knowsAbout: [
+    "Artificial Intelligence",
+    "Software Engineering",
+    "TypeScript",
+    "Next.js",
+    "Construction Technology",
+    "PropTech",
+    "African Tech Ecosystem",
+    "AI Agent Systems",
+    "Local-First Software",
+  ],
+  nationality: { "@type": "Country", name: "Uganda" },
+  homeLocation: { "@type": "Place", name: "Kampala, Uganda" },
+  sameAs: [
+    "https://github.com/CalvinMagezi",
+    `${BASE_URL}/biography`,
+    `${BASE_URL}/about-me`,
+  ],
+};
+
+// JSON-LD: WebSite schema — enables Sitelinks search box in Google
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${BASE_URL}/#website`,
+  url: BASE_URL,
+  name: "Calvin Magezi",
+  description: "Personal website of Calvin Magezi — CTO and tech entrepreneur from Uganda",
+  author: { "@id": `${BASE_URL}/#person` },
+  inLanguage: "en-US",
 };
 
 export default function RootLayout({
@@ -128,6 +183,14 @@ export default function RootLayout({
         <meta name="theme-color" content="#7C3AED" />
         <meta name="color-scheme" content="light dark" />
         <link rel="manifest" href="/manifest.json" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} ${plusJakarta.variable} ${jetbrainsMono.variable} antialiased flex flex-col w-screen min-h-screen`}

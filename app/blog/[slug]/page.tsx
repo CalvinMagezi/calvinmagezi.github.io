@@ -55,7 +55,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const category = getCategoryInfo(post.tags[0] ?? "default");
 
-  const postUrl = `https://calvinmagezi.vercel.app/blog/${slug}`;
+  const postUrl = `https://calvinmagezi.github.io/blog/${slug}`;
 
   // JSON-LD structured data
   const jsonLd = {
@@ -68,7 +68,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     author: {
       "@type": "Person",
       name: "Calvin Magezi",
-      url: "https://calvinmagezi.vercel.app",
+      url: "https://calvinmagezi.github.io",
     },
     publisher: {
       "@type": "Person",
@@ -77,7 +77,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     datePublished: post.date,
     keywords: post.tags.join(", "),
     ...(post.coverImage
-      ? { image: `https://calvinmagezi.vercel.app${post.coverImage}` }
+      ? { image: `https://calvinmagezi.github.io${post.coverImage}` }
       : {}),
   };
 

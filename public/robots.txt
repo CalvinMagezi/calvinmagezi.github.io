@@ -1,14 +1,7 @@
 User-agent: *
 Allow: /
-
-# Sitemap
-Sitemap: https://calvinmagezi.github.io/sitemap.xml
-
-# Disallow crawling of API routes
-User-agent: *
 Disallow: /api/
 
-# Allow all major search engines
 User-agent: Googlebot
 Allow: /
 
@@ -20,3 +13,6 @@ Allow: /
 
 User-agent: DuckDuckBot
 Allow: /
+
+# Sitemap
+Sitemap: https://calvinmagezi.github.io/sitemap.xml
