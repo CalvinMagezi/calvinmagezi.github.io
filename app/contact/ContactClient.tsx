@@ -1,8 +1,7 @@
 'use client';
 
 import React, { useState } from "react";
-import { BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
-import { FaLinkedin } from "react-icons/fa";
+import { BsGithub } from "react-icons/bs";
 import { useForm, SubmitHandler } from "react-hook-form";
 import toast from "react-hot-toast";
 import { MakeWebContact } from "@/lib/graphql/mutations";
@@ -68,39 +67,11 @@ export default function ContactClient() {
 
         <div className="flex items-center justify-center mb-8 space-x-4 text-lg">
           <a
-            href="https://www.facebook.com/profile.php?id=100073695104661"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <BsFacebook className="socialIcon" />
-          </a>
-          <a
-            href="https://www.instagram.com/calvinmagezi/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <BsInstagram className="socialIcon" />
-          </a>
-          <a
-            href="https://twitter.com/CalvinMagezi"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <BsTwitter className="socialIcon" />
-          </a>
-          <a
             href="https://github.com/CalvinMagezi"
             target="_blank"
             rel="noopener noreferrer"
           >
             <BsGithub className="socialIcon" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/calvin-magezi-639a53228/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin className="socialIcon" />
           </a>
         </div>
 
