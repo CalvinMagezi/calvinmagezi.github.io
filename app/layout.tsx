@@ -34,7 +34,7 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
 });
 
-const BASE_URL = "https://calvinmagezi.github.io";
+const BASE_URL = "https://calvinmagezi.vercel.app";
 
 export const metadata: Metadata = {
   title: {

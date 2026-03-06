@@ -11,7 +11,7 @@ Calvin Magezi is the Chief Technology Officer and co-founder of Kolaborate Platf
 - **Location**: Kampala, Uganda
 - **Companies**: Kolaborate Platforms Limited, SiteSeer
 - **GitHub**: https://github.com/CalvinMagezi
-- **Website**: https://calvinmagezi.github.io
+- **Website**: https://calvinmagezi.vercel.app
 
 ## Projects
 
@@ -38,7 +38,7 @@ Open-source local-first AI agent hub. Vault-centric multi-agent orchestration sy
 
 ## Blog
 
-Calvin writes about AI, software engineering, and tech entrepreneurship at https://calvinmagezi.github.io/blog
+Calvin writes about AI, software engineering, and tech entrepreneurship at https://calvinmagezi.vercel.app/blog
 
 Recent posts:
 - "Your Ability to Dictate Your Thoughts Will Be More Valuable Than Anything"

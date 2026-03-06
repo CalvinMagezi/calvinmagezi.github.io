@@ -15,4 +15,4 @@ User-agent: DuckDuckBot
 Allow: /
 
 # Sitemap
-Sitemap: https://calvinmagezi.github.io/sitemap.xml
+Sitemap: https://calvinmagezi.vercel.app/sitemap.xml
