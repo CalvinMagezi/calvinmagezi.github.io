@@ -53,7 +53,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   if (!post) notFound();
 
-  const postUrl = `https://calvinmagezi.github.io/blog/${slug}`;
+  const BASE_URL = "https://calvinmagezi.vercel.app";
+  const postUrl = `${BASE_URL}/blog/${slug}`;
 
   // JSON-LD structured data
   const jsonLd = {
@@ -66,16 +67,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     author: {
       "@type": "Person",
       name: "Calvin Magezi",
-      url: "https://calvinmagezi.github.io",
+      url: BASE_URL,
+      "@id": `${BASE_URL}/#person`,
     },
     publisher: {
       "@type": "Person",
       name: "Calvin Magezi",
+      url: BASE_URL,
     },
     datePublished: post.date,
+    dateModified: post.date,
     keywords: post.tags.join(", "),
     ...(post.coverImage
-      ? { image: `https://calvinmagezi.github.io${post.coverImage}` }
+      ? { image: `${BASE_URL}${post.coverImage}` }
       : {}),
   };
 

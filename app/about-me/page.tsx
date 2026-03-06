@@ -14,9 +14,26 @@ export const metadata: Metadata = {
   },
 };
 
+const profilePageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": "https://calvinmagezi.vercel.app/about-me",
+  url: "https://calvinmagezi.vercel.app/about-me",
+  name: "About Calvin Magezi",
+  mainEntity: { "@id": "https://calvinmagezi.vercel.app/#person" },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://calvinmagezi.vercel.app" },
+      { "@type": "ListItem", position: 2, name: "About", item: "https://calvinmagezi.vercel.app/about-me" },
+    ],
+  },
+};
+
 export default function AboutMePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageJsonLd) }} />
       <About />
       <Background />
       <Clients />

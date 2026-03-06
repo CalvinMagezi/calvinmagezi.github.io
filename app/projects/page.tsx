@@ -3,9 +3,26 @@ import { AllProjects } from "@/lib/graphql/queries";
 import { ProjectType } from "../../typings";
 import ProjectsClient from "../components/projects/ProjectsClient";
 
-export const metadata = {
-  title: "Projects",
-  description: "A showcase of my recent work and side projects - featuring web applications, AI solutions, and innovative software built with modern technologies.",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects | Calvin Magezi",
+  description: "Projects by Calvin Magezi — Kolaborate, SiteSeer, Chamuka, Agent-HQ, and more. AI platforms, construction tech, talent marketplaces, and developer tools built for Africa and beyond.",
+  alternates: { canonical: "/projects" },
+  openGraph: {
+    title: "Projects | Calvin Magezi",
+    description: "AI platforms, construction tech, talent marketplaces — built for Africa and beyond.",
+    type: "website",
+  },
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://calvinmagezi.vercel.app" },
+    { "@type": "ListItem", position: 2, name: "Projects", item: "https://calvinmagezi.vercel.app/projects" },
+  ],
 };
 
 export const revalidate = 300; // revalidate every 5 minutes
@@ -53,5 +70,10 @@ export default async function AllProjectsPage() {
     );
   }
 
-  return <ProjectsClient projects={projects} />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <ProjectsClient projects={projects} />
+    </>
+  );
 }

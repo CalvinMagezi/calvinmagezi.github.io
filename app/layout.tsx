@@ -155,6 +155,10 @@ const personJsonLd = {
   homeLocation: { "@type": "Place", name: "Kampala, Uganda" },
   sameAs: [
     "https://github.com/CalvinMagezi",
+    "https://twitter.com/CalvinMagezi",
+    "https://www.linkedin.com/in/calvin-magezi-639a53228/",
+    "https://www.instagram.com/calvinmagezi/",
+    "https://www.facebook.com/profile.php?id=100073695104661",
     `${BASE_URL}/biography`,
     `${BASE_URL}/about-me`,
   ],
