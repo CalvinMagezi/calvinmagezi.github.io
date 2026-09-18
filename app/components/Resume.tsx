@@ -170,9 +170,9 @@ function Resume() {
                       In September of 2021 I decided that I was ready to try
                       take on the challenge of running my own company. So I
                       founded MTS and put together a team of like minded
-                      individuals who are looking to create unique solutions and
-                      grow a network large enough to serve as a purpose for the
-                      smart city my family is building.
+                      individuals focused on creating unique solutions and
+                      building scalable digital infrastructure and custom software
+                      products across the region.
                     </p>
                   </div>
                 </div>
@@ -187,12 +187,11 @@ function Resume() {
                       MOVED TO DUBAI
                     </h4>
                     <p className="text-sm leading-snug text-opacity-100 md:text-base">
-                      In December 2021 I relocated myself from Nairobi to Dubai.
+                      In December 2021 I relocated from Nairobi to Dubai.
                       The trip was initially set to find an investor for one of
-                      our products that was coming up, but due to lack of
-                      interest by the investor, I ended up changing plans and
-                      instead remained in Dubai to seek further connections and
-                      start a life with my beautiful girlfriend Mariannah Hiuhu.
+                      our upcoming products, but I subsequently remained in
+                      Dubai to expand business networks, engage regional partners,
+                      and explore international market opportunities.
                     </p>
                   </div>
                 </div>
@@ -249,37 +248,6 @@ function Resume() {
                       company based and operating within Dubai. I was given the
                       duties of designing and maintaining systems that would aid
                       the real estate company, including their web application.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex flex-row-reverse items-center justify-between w-full mb-8 left-timeline">
-                  <div className="order-1 w-5/12"></div>
-                  <div className="order-1 w-5/12 px-1 py-4 text-right">
-                    <p className="mb-3 text-base text-[#FFC100]">January 2023</p>
-                    <h4 className="mb-3 text-lg font-bold md:text-2xl">
-                      ENGAGEMENT & RETURN TO KENYA
-                    </h4>
-                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
-                      In January 2023 I proposed to my beautiful girlfriend Mariannah 
-                      Hiuhu. We then made the decision to move back to Kenya in February 
-                      to be closer to family and prepare for our growing family.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between w-full mb-8 right-timeline">
-                  <div className="order-1 w-5/12"></div>
-                  <div className="order-1 w-5/12 px-1 py-4">
-                    <p className="mb-3 text-base text-[#FFC100]">April 2023</p>
-                    <h4 className="mb-3 text-lg font-bold text-left md:text-2xl">
-                      BIRTH OF TWINS LUCAH & ZION
-                    </h4>
-                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
-                      On April 30th, 2023, just two days after my birthday, our 
-                      beautiful twin boys were born. Lucah came first, followed by 
-                      Zion just one minute later. This was a life-changing moment 
-                      that brought immense joy and new responsibilities.
                     </p>
                   </div>
                 </div>
@@ -353,12 +321,12 @@ function Resume() {
                   <div className="order-1 w-5/12 px-1 py-4 text-right">
                     <p className="mb-3 text-base text-[#FFC100]">August 2024</p>
                     <h4 className="mb-3 text-lg font-bold md:text-2xl">
-                      FAMILY RELOCATION TO UGANDA
+                      RELOCATION TO UGANDA & REGIONAL EXPANSION
                     </h4>
                     <p className="text-sm leading-snug text-opacity-100 md:text-base">
-                      Made the strategic decision to relocate with my family to Uganda, 
-                      positioning ourselves closer to the African tech ecosystem while 
-                      continuing remote work on SiteSeer and maintaining client relationships.
+                      Made the strategic decision to relocate operations to Uganda,
+                      positioning closer to the rapidly growing East African tech ecosystem
+                      while continuing engineering leadership on SiteSeer and scaling regional partnerships.
                     </p>
                   </div>
                 </div>
@@ -382,23 +350,8 @@ function Resume() {
                 <div className="flex flex-row-reverse items-center justify-between w-full mb-8 left-timeline">
                   <div className="order-1 w-5/12"></div>
                   <div className="order-1 w-5/12 px-1 py-4 text-right">
-                    <p className="mb-3 text-base text-[#FFC100]">February 2025</p>
-                    <h4 className="mb-3 text-lg font-bold md:text-2xl">
-                      BIRTH OF DAUGHTER NOVA
-                    </h4>
-                    <p className="text-sm leading-snug text-opacity-100 md:text-base">
-                      Our family grew again with the birth of our beautiful daughter Nova. 
-                      Now a father of three, balancing the joys of parenthood with 
-                      leading innovative tech projects across two dynamic companies.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between w-full mb-8 right-timeline">
-                  <div className="order-1 w-5/12"></div>
-                  <div className="order-1 w-5/12 px-1 py-4">
                     <p className="mb-3 text-base text-[#FFC100]">March 2025</p>
-                    <h4 className="mb-3 text-lg font-bold text-left md:text-2xl">
+                    <h4 className="mb-3 text-lg font-bold md:text-2xl">
                       ELEVATING WOMEN WITH TECH PROGRAM
                     </h4>
                     <p className="text-sm leading-snug text-opacity-100 md:text-base">
@@ -410,11 +363,11 @@ function Resume() {
                   </div>
                 </div>
 
-                <div className="flex flex-row-reverse items-center justify-between w-full mb-8 left-timeline">
+                <div className="flex items-center justify-between w-full mb-8 right-timeline">
                   <div className="order-1 w-5/12"></div>
-                  <div className="order-1 w-5/12 px-1 py-4 text-right">
+                  <div className="order-1 w-5/12 px-1 py-4">
                     <p className="mb-3 text-base text-[#FFC100]">September 2025</p>
-                    <h4 className="mb-3 text-lg font-bold md:text-2xl">
+                    <h4 className="mb-3 text-lg font-bold text-left md:text-2xl">
                       HORNETS NEST SHOW SUCCESS
                     </h4>
                     <p className="text-sm leading-snug text-opacity-100 md:text-base">
@@ -426,11 +379,11 @@ function Resume() {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between w-full mb-8 right-timeline">
+                <div className="flex flex-row-reverse items-center justify-between w-full mb-8 left-timeline">
                   <div className="order-1 w-5/12"></div>
-                  <div className="order-1 w-5/12 px-1 py-4">
+                  <div className="order-1 w-5/12 px-1 py-4 text-right">
                     <p className="mb-3 text-base text-[#FFC100]">October 2025</p>
-                    <h4 className="mb-3 text-lg font-bold text-left md:text-2xl">
+                    <h4 className="mb-3 text-lg font-bold md:text-2xl">
                       MAJOR PROJECT LEADERSHIP
                     </h4>
                     <p className="text-sm leading-snug text-opacity-100 md:text-base">
@@ -442,11 +395,11 @@ function Resume() {
                   </div>
                 </div>
 
-                <div className="flex flex-row-reverse items-center justify-between w-full mb-24 left-timeline">
+                <div className="flex items-center justify-between w-full mb-24 right-timeline">
                   <div className="order-1 w-5/12"></div>
-                  <div className="order-1 w-5/12 px-1 py-4 text-right">
+                  <div className="order-1 w-5/12 px-1 py-4">
                     <p className="mb-3 text-base text-[#FFC100]">February 2026</p>
-                    <h4 className="mb-3 text-lg font-bold md:text-2xl">
+                    <h4 className="mb-3 text-lg font-bold text-left md:text-2xl">
                       BUILT AGENT-HQ
                     </h4>
                     <p className="text-sm leading-snug text-opacity-100 md:text-base">

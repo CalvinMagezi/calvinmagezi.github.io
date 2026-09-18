@@ -3,7 +3,7 @@ function Background() {
     <section className="w-full px-8 pt-20 pb-16 xl:px-0">
       <div className="flex flex-col items-start max-w-6xl mx-auto md:flex-row">
         <h3 className="w-full text-4xl font-extrabold tracking-normal sm:text-5xl md:text-5xl md:pr-10 lg:pr-16 xl:pr-20 md:leading-none md:-mt-2 md:w-1/2">
-          Tech leader, father of three, and proudly African. Building the future 
+          Tech leader, software architect, and proudly African. Building the future 
           through innovative technology solutions.
         </h3>
         <div className="flex flex-col w-full mt-8 space-y-5 md:w-1/2 md:space-y-10 md:mt-0">
@@ -31,8 +31,7 @@ function Background() {
             programs. At SiteSeer, I co-founded an AI-powered construction management platform 
             transforming Africa&apos;s $71.5B construction market. I&apos;m also passionate about 
             social impact through tech, having created the &quot;Elevating Women With Tech&quot; 
-            program and spoken to refugee students. Married to Mariannah and father to 
-            twins Lucah & Zion (2023) and daughter Nova (2025).
+            program and spoken to refugee students.
           </p>
         </div>
       </div>
