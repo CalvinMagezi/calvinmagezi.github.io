@@ -65,6 +65,7 @@ export const skills: Skill[] = [
   { name: "Figma", proficiency: 80, category: "tools", years: 4, description: "Design & prototyping" },
   { name: "Git", proficiency: 90, category: "tools", years: 8, description: "Version control" },
   { name: "Docker", proficiency: 70, category: "tools", years: 3, description: "Containerization" },
+  { name: "Agentic Orchestration", proficiency: 85, category: "tools", years: 2, description: "Coordinating AI agents" },
 
   // Infrastructure
   { name: "Azure", proficiency: 75, category: "infrastructure", years: 3, description: "Microsoft cloud platform" },
