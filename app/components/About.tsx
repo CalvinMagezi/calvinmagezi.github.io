@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaArrowRight, FaSitemap } from "react-icons/fa";
+import { FaArrowRight, FaDesktop } from "react-icons/fa";
 
 function About() {
   return (
@@ -21,19 +21,20 @@ function About() {
             global opportunities and supporting refugee employment programs. SiteSeer is
             an AI-powered construction project management platform transforming Africa&apos;s
             $71.5B construction market through computer vision and predictive analytics.
-            I&apos;m also co-founder and co-developer of Chamuka, an AI-powered diagramming
-            platform that turns ideas into diagrams instantly.
+            Under Chamuka Labs I also design and develop Elgato Stream Deck plugins and
+            CORSAIR XENEON EDGE widgets, sold on the Elgato Marketplace and styled after
+            my personal brand colors.
           </p>
           <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-6">
             <a
-              href="https://chamuka.ai"
+              href="https://chamuka-edge-widgets.vercel.app"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener"
               className="inline-block w-full px-5 py-4 font-bold text-center md:w-auto"
             >
               <div className="flex flex-col items-center justify-center space-y-2">
-                <FaSitemap className="text-4xl" />
-                <span>Chamuka</span>
+                <FaDesktop className="text-4xl" />
+                <span>Edge Widgets</span>
                 <FaArrowRight className="text-2xl" />
               </div>
             </a>

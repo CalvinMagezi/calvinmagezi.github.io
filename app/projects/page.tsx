@@ -7,7 +7,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Projects | Calvin Magezi",
-  description: "Projects by Calvin Magezi — Kolaborate, SiteSeer, Chamuka, Agent-HQ, and more. AI platforms, construction tech, talent marketplaces, and developer tools built for Africa and beyond.",
+  description: "Projects by Calvin Magezi — Kolaborate, SiteSeer, Agent-HQ, Chamuka Labs XENEON EDGE widgets, and more. AI platforms, construction tech, talent marketplaces, and developer tools built for Africa and beyond.",
   alternates: { canonical: "/projects" },
   openGraph: {
     title: "Projects | Calvin Magezi",
