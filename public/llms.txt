@@ -21,8 +21,8 @@ Africa's talent marketplace and BPO platform. Mission: "Africa's Engine for Glob
 ### SiteSeer
 AI-powered construction and real estate technology platform. Includes Pango (Kenya home planning app), a Sales CRM, and the NCA Portal for Uganda's National Construction Authority.
 
-### Chamuka
-AI-powered collaborative diagramming tool. Uses Yjs/CRDT for real-time collaboration.
+### Chamuka Labs
+Calvin's studio for Elgato Stream Deck plugins and CORSAIR XENEON EDGE widgets, styled after his personal brand colors and sold on the Elgato Marketplace (Task Board Edge, Prayer Times Edge, Time Zone Planner; Board Edge for Trello in review). Site: https://chamuka-edge-widgets.vercel.app
 
 ### Agent-HQ
 Open-source local-first AI agent hub. Vault-centric multi-agent orchestration system built on Obsidian. Available at https://github.com/CalvinMagezi/agent-hq
